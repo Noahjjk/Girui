@@ -14,6 +14,7 @@ from app.core.security import (
     check_password_strength,
     create_access_token,
     decode_access_token,
+    ensure_utc,
     generate_refresh_token,
     hash_password,
     hash_refresh_token,
@@ -150,7 +151,8 @@ async def refresh(payload: RefreshRequest, request: Request, db: AsyncSession = 
 
     if row is None or row.revoked:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="登录状态已失效，请重新登录")
-    if row.expires_at <= utcnow():
+    expires_at = ensure_utc(row.expires_at)
+    if expires_at is not None and expires_at <= utcnow():
         row.revoked = True
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="登录状态已过期，请重新登录")
 

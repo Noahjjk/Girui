@@ -90,3 +90,13 @@ def refresh_token_ttl(remember_me: bool) -> timedelta:
 
 def utcnow() -> datetime:
     return datetime.now(timezone.utc)
+
+
+def ensure_utc(dt: datetime | None) -> datetime | None:
+    """确保 datetime 对象带有 UTC 时区信息。SQLite 存储时会丢失时区信息，读出时为 naive datetime。"""
+    if dt is None:
+        return None
+    if dt.tzinfo is None:
+        return dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc)
+

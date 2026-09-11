@@ -29,7 +29,7 @@ class Settings(BaseSettings):
     DB_ECHO: bool = False
 
     # ---------------- 认证 ----------------
-    JWT_SECRET: str = "dev-only-secret-please-change"
+    JWT_SECRET: str = "dev-only-secret-please-change-must-be-32-chars-minimum"
     JWT_ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
     # 「记住登录」勾选时的 Refresh Token 有效期
