@@ -6,6 +6,7 @@
 from __future__ import annotations
 
 from typing import Any, Dict, List, Optional
+from urllib.parse import unquote
 
 from app.core.crypto import decrypt, mask
 from app.models.chat import ChatMessage, ChatSession
@@ -63,10 +64,16 @@ def user_to_out(user: User) -> UserOut:
 
 
 def token_to_session_info(token) -> SessionInfo:
+    d_name = token.device_name
+    if d_name and "%" in d_name:
+        try:
+            d_name = unquote(d_name)
+        except Exception:
+            pass
     return SessionInfo(
         id=token.id,
         device_id=token.device_id,
-        device_name=token.device_name,
+        device_name=d_name,
         ip=token.ip,
         user_agent=token.user_agent,
         remember_me=token.remember_me,

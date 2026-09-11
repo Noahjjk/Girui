@@ -3,6 +3,8 @@ import os
 import sys
 from pathlib import Path
 
+# python download_models.py --model all
+
 # 配置工程路径
 PROJECT_ROOT = Path(__file__).resolve().parent
 BACKEND_DIR = PROJECT_ROOT / "backend"

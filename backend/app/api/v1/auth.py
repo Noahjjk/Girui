@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import logging
 from datetime import timedelta
+from urllib.parse import unquote
 
 from fastapi import APIRouter, Depends, HTTPException, Request, status
 from sqlalchemy import select
@@ -54,12 +55,15 @@ async def _issue_tokens(
     plain_refresh = generate_refresh_token()
     ttl = refresh_token_ttl(remember_me)
 
+    raw_device_name = request.headers.get("x-device-name")
+    device_name = unquote(raw_device_name) if raw_device_name else None
+
     db.add(
         RefreshToken(
             user_id=user.id,
             token_hash=hash_refresh_token(plain_refresh),
             device_id=get_device_id(request),
-            device_name=request.headers.get("x-device-name"),
+            device_name=device_name,
             user_agent=get_user_agent(request),
             ip=get_client_ip(request),
             remember_me=remember_me,

@@ -78,7 +78,7 @@ class Settings(BaseSettings):
     # ---------------- 检索参数 ----------------
     RETRIEVAL_TOP_K: int = 30            # 检索候选条数
     RETRIEVAL_TOP_N: int = 8             # 经权限过滤+排序后进入提示词的条数
-    SIMILARITY_THRESHOLD: float = 0.2    # 向量相似度下限
+    SIMILARITY_THRESHOLD: float = 0.4    # 向量相似度下限（低于 0.40 不作为原文溯源参考）
     VECTOR_SIMILARITY_WEIGHT: float = 0.3  # RAGFlow 语义相似度权重
     HYBRID_VECTOR_WEIGHT: float = 0.6      # 轻量内核：向量分在混合排序中的权重
     CHAT_HISTORY_ROUNDS: int = 6           # 携带的历史轮数

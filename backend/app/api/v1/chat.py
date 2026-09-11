@@ -359,45 +359,8 @@ async def completions(
 
     await db.commit()
 
-    # 检索层就绪但无内容时，不调用大模型，直接给出说明，省 token
-    if not outcome.has_context and outcome.reason:
-        async def empty_stream() -> AsyncIterator[str]:
-            assistant = ChatMessage(
-                session_id=session.id, role=MessageRole.ASSISTANT,
-                content=outcome.reason, citations=[], model_name=provider.name,
-            )
-            async with SessionLocal() as s:
-                s.add(assistant)
-                sess = (await s.execute(select(ChatSession).where(ChatSession.id == session.id))).scalar_one()
-                sess.message_count = (sess.message_count or 0) + 2
-                await s.commit()
-                await s.refresh(assistant)
-            yield _sse("meta", {
-                "session_id": session.id, "title": session.title,
-                "model": provider.name, "citations": [], "reason": outcome.reason,
-            })
-            yield _sse("delta", {"text": outcome.reason})
-            yield _sse("done", {"message_id": assistant.id, "session_id": session.id})
-
-        if payload.stream:
-            return StreamingResponse(
-                empty_stream(),
-                media_type="text/event-stream",
-                headers=_sse_headers(),
-            )
-        async with SessionLocal() as s:
-            assistant = ChatMessage(
-                session_id=session.id, role=MessageRole.ASSISTANT,
-                content=outcome.reason, citations=[], model_name=provider.name,
-            )
-            s.add(assistant)
-            await s.commit()
-            await s.refresh(assistant)
-        return {
-            "session_id": session.id, "message_id": assistant.id,
-            "content": outcome.reason, "citations": [], "model": provider.name,
-        }
-
+    # 如果有检索到知识库内容，或虽然未检索到知识库内容但用户提出了通用问题，正常调用大模型作答
+    # 仅当检索层发生后端错误时抛出异常
     if outcome.error:
         raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail=outcome.error)
 

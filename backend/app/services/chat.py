@@ -98,8 +98,11 @@ async def retrieve(
         deduped.append(ch)
 
     deduped.sort(key=lambda c: float(c.get("similarity") or 0), reverse=True)
+    # 过滤掉相似度低于阈值的低相关片段，避免在原文溯源中出现
+    threshold = settings.SIMILARITY_THRESHOLD
+    filtered_chunks = [ch for ch in deduped if float(ch.get("similarity") or 0) >= threshold]
     limit = top_n or settings.RETRIEVAL_TOP_N
-    selected = deduped[:limit]
+    selected = filtered_chunks[:limit]
 
     chunks: List[Dict[str, Any]] = []
     citations: List[Dict[str, Any]] = []
