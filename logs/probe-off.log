@@ -1,0 +1,18 @@
+Python 3.12.3   PID 1533606
+片段数 2000   ONNX CPU arena = 关
+  启动基线                                   RSS =    10.2 MB
+
+[1] 导入依赖（tokenizers / onnxruntime / jieba 各自吃多少）
+  导入 embedding 模块后                       RSS =    53.5 MB
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.914 seconds.
+Prefix dict has been built successfully.
+  jieba.initialize() 后                   RSS =   110.9 MB
+  onnxruntime 模型加载后                      RSS =   158.1 MB
+
+[2] 造 2000 条典型片段（约 400 字/条）
+  共 2000 条，1.19 MB 文本
+  文本就绪                                   RSS =   159.3 MB
+
+[3] 逐批编码（与生产路径一致）

@@ -1,0 +1,53 @@
+# ============================================================
+# 极睿知识库 业务后端依赖
+#
+# 两套运行模式，由 RETRIEVAL_BACKEND 选择：
+#   local   —— 轻量内核（默认）：SQLite + 本地 ONNX 嵌入，2 核 1.6 GB 可跑
+#   ragflow —— 外部 RAGFlow：需 4 核 / 16 GB 级别机器，另需 PostgreSQL
+# 依赖装在同一份环境里，方便随时切换。
+# ============================================================
+
+# ---------------- Web 框架 ----------------
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+pydantic==2.10.4
+pydantic-settings==2.7.0
+email-validator==2.2.0
+python-dateutil==2.9.0.post0
+
+# ---------------- 数据库 ----------------
+sqlalchemy[asyncio]==2.0.36
+alembic==1.14.0
+greenlet==3.1.1
+# 轻量部署用：单文件、零进程，适合小内存机器
+aiosqlite==0.22.1
+# 仅当 DATABASE_URL 指向 PostgreSQL 时才需要
+# asyncpg==0.30.0
+
+# ---------------- 认证与加密 ----------------
+PyJWT==2.10.1
+bcrypt==4.2.1
+cryptography==44.0.0
+
+# ---------------- HTTP / 文件 IO ----------------
+httpx==0.28.1
+aiofiles==24.1.0
+
+# ---------------- 轻量检索内核（RETRIEVAL_BACKEND=local）----------------
+# 嵌入推理刻意只用 onnxruntime + tokenizers，不装 torch：
+#   torch 一 import 就吃 300~400 MB 常驻内存，目标机器总共只有 1.6 GB。
+# 实测 bge-small-zh-v1.5 int8 常驻约 150~200 MB，单条向量化约 25 ms。
+onnxruntime==1.29.0
+tokenizers==0.23.2
+numpy==2.5.3
+# 注：huggingface-hub 只在下模型时用过，运行期零 import，故不装。
+# 下模型用 backend/scripts/prepare_model.py（纯 urllib，不依赖该库）。
+# 中文全文检索分词（SQLite FTS5 内置分词器不认中文词边界）
+jieba==0.42.1
+
+# ---------------- 文档解析 ----------------
+PyMuPDF==1.28.2
+python-docx==1.2.0
+openpyxl==3.1.5
+python-pptx==1.0.2

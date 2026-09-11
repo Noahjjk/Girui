@@ -1,0 +1,145 @@
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting fastapi==0.115.6 (from -r requirements.txt (line 11))
+  Downloading fastapi-0.115.6-py3-none-any.whl (94 kB)
+Collecting uvicorn==0.34.0 (from uvicorn[standard]==0.34.0->-r requirements.txt (line 12))
+  Downloading uvicorn-0.34.0-py3-none-any.whl (62 kB)
+Collecting python-multipart==0.0.20 (from -r requirements.txt (line 13))
+  Downloading python_multipart-0.0.20-py3-none-any.whl (24 kB)
+Collecting pydantic==2.10.4 (from -r requirements.txt (line 14))
+  Downloading pydantic-2.10.4-py3-none-any.whl (431 kB)
+Collecting pydantic-settings==2.7.0 (from -r requirements.txt (line 15))
+  Downloading pydantic_settings-2.7.0-py3-none-any.whl (29 kB)
+Collecting email-validator==2.2.0 (from -r requirements.txt (line 16))
+  Downloading email_validator-2.2.0-py3-none-any.whl (33 kB)
+Collecting python-dateutil==2.9.0.post0 (from -r requirements.txt (line 17))
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Collecting sqlalchemy==2.0.36 (from sqlalchemy[asyncio]==2.0.36->-r requirements.txt (line 20))
+  Downloading SQLAlchemy-2.0.36-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 9.5 MB/s  0:00:00
+Collecting alembic==1.14.0 (from -r requirements.txt (line 21))
+  Downloading alembic-1.14.0-py3-none-any.whl (233 kB)
+Collecting greenlet==3.1.1 (from -r requirements.txt (line 22))
+  Downloading greenlet-3.1.1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (613 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 613.1/613.1 kB 7.5 MB/s  0:00:00
+Collecting aiosqlite==0.22.1 (from -r requirements.txt (line 24))
+  Downloading aiosqlite-0.22.1-py3-none-any.whl (17 kB)
+Collecting PyJWT==2.10.1 (from -r requirements.txt (line 29))
+  Downloading PyJWT-2.10.1-py3-none-any.whl (22 kB)
+Collecting bcrypt==4.2.1 (from -r requirements.txt (line 30))
+  Downloading bcrypt-4.2.1-cp39-abi3-manylinux_2_28_x86_64.whl (278 kB)
+Collecting cryptography==44.0.0 (from -r requirements.txt (line 31))
+  Downloading cryptography-44.0.0-cp39-abi3-manylinux_2_28_x86_64.whl (4.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 MB 6.1 MB/s  0:00:00
+Collecting httpx==0.28.1 (from -r requirements.txt (line 34))
+  Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+Collecting aiofiles==24.1.0 (from -r requirements.txt (line 35))
+  Downloading aiofiles-24.1.0-py3-none-any.whl (15 kB)
+Collecting onnxruntime==1.29.0 (from -r requirements.txt (line 41))
+  Downloading onnxruntime-1.29.0-cp312-cp312-manylinux_2_28_x86_64.whl (23.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 23.1/23.1 MB 1.4 MB/s  0:00:16
+Collecting tokenizers==0.23.2 (from -r requirements.txt (line 42))
+  Downloading tokenizers-0.23.2-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 1.9 MB/s  0:00:01
+Collecting numpy==2.5.3 (from -r requirements.txt (line 43))
+  Downloading numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 774.3 kB/s  0:00:21
+Collecting jieba==0.42.1 (from -r requirements.txt (line 47))
+  Downloading jieba-0.42.1.tar.gz (19.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 19.2/19.2 MB 938.7 kB/s  0:00:20
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting PyMuPDF==1.28.2 (from -r requirements.txt (line 50))
+  Downloading pymupdf-1.28.2-cp310-abi3-manylinux_2_28_x86_64.whl (25.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 25.8/25.8 MB 809.4 kB/s  0:00:32
+Collecting python-docx==1.2.0 (from -r requirements.txt (line 51))
+  Downloading python_docx-1.2.0-py3-none-any.whl (252 kB)
+Collecting openpyxl==3.1.5 (from -r requirements.txt (line 52))
+  Using cached openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+Collecting python-pptx==1.0.2 (from -r requirements.txt (line 53))
+  Downloading python_pptx-1.0.2-py3-none-any.whl (472 kB)
+Collecting starlette<0.42.0,>=0.40.0 (from fastapi==0.115.6->-r requirements.txt (line 11))
+  Downloading starlette-0.41.3-py3-none-any.whl (73 kB)
+Collecting typing-extensions>=4.8.0 (from fastapi==0.115.6->-r requirements.txt (line 11))
+  Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Collecting annotated-types>=0.6.0 (from pydantic==2.10.4->-r requirements.txt (line 14))
+  Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Collecting pydantic-core==2.27.2 (from pydantic==2.10.4->-r requirements.txt (line 14))
+  Downloading pydantic_core-2.27.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 1.3 MB/s  0:00:01
+Collecting click>=7.0 (from uvicorn==0.34.0->uvicorn[standard]==0.34.0->-r requirements.txt (line 12))
+  Downloading click-8.5.0-py3-none-any.whl (125 kB)
+Collecting h11>=0.8 (from uvicorn==0.34.0->uvicorn[standard]==0.34.0->-r requirements.txt (line 12))
+  Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Collecting python-dotenv>=0.21.0 (from pydantic-settings==2.7.0->-r requirements.txt (line 15))
+  Downloading python_dotenv-1.2.3-py3-none-any.whl (22 kB)
+Collecting dnspython>=2.0.0 (from email-validator==2.2.0->-r requirements.txt (line 16))
+  Downloading dnspython-2.8.0-py3-none-any.whl (331 kB)
+Collecting idna>=2.0.0 (from email-validator==2.2.0->-r requirements.txt (line 16))
+  Downloading idna-3.19-py3-none-any.whl (68 kB)
+Collecting six>=1.5 (from python-dateutil==2.9.0.post0->-r requirements.txt (line 17))
+  Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Collecting Mako (from alembic==1.14.0->-r requirements.txt (line 21))
+  Downloading mako-1.4.1-py3-none-any.whl (80 kB)
+Collecting cffi>=1.12 (from cryptography==44.0.0->-r requirements.txt (line 31))
+  Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)
+Collecting anyio (from httpx==0.28.1->-r requirements.txt (line 34))
+  Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+Collecting certifi (from httpx==0.28.1->-r requirements.txt (line 34))
+  Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+Collecting httpcore==1.* (from httpx==0.28.1->-r requirements.txt (line 34))
+  Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
+Collecting flatbuffers (from onnxruntime==1.29.0->-r requirements.txt (line 41))
+  Using cached flatbuffers-25.12.19-py2.py3-none-any.whl (26 kB)
+Collecting packaging (from onnxruntime==1.29.0->-r requirements.txt (line 41))
+  Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Collecting protobuf>=4.25.8 (from onnxruntime==1.29.0->-r requirements.txt (line 41))
+  Downloading protobuf-7.36.1-cp310-abi3-manylinux2014_x86_64.whl (343 kB)
+Collecting huggingface-hub<2.0,>=0.16.4 (from tokenizers==0.23.2->-r requirements.txt (line 42))
+  Downloading huggingface_hub-1.31.0-py3-none-any.whl (798 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 798.3/798.3 kB 1.3 MB/s  0:00:00
+Collecting lxml>=3.1.0 (from python-docx==1.2.0->-r requirements.txt (line 51))
+  Downloading lxml-6.1.3-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 1.2 MB/s  0:00:04
+Collecting et-xmlfile (from openpyxl==3.1.5->-r requirements.txt (line 52))
+  Using cached et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+Collecting Pillow>=3.3.2 (from python-pptx==1.0.2->-r requirements.txt (line 53))
+  Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 1.4 MB/s  0:00:04
+Collecting XlsxWriter>=0.5.7 (from python-pptx==1.0.2->-r requirements.txt (line 53))
+  Downloading xlsxwriter-3.2.9-py3-none-any.whl (175 kB)
+Collecting httptools>=0.6.3 (from uvicorn[standard]==0.34.0->-r requirements.txt (line 12))
+  Using cached httptools-0.8.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (523 kB)
+Collecting pyyaml>=5.1 (from uvicorn[standard]==0.34.0->-r requirements.txt (line 12))
+  Using cached pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+Collecting uvloop!=0.15.0,!=0.15.1,>=0.14.0 (from uvicorn[standard]==0.34.0->-r requirements.txt (line 12))
+  Using cached uvloop-0.22.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (4.4 MB)
+Collecting watchfiles>=0.13 (from uvicorn[standard]==0.34.0->-r requirements.txt (line 12))
+  Using cached watchfiles-1.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (456 kB)
+Collecting websockets>=10.4 (from uvicorn[standard]==0.34.0->-r requirements.txt (line 12))
+  Downloading websockets-17.1-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (224 kB)
+Collecting filelock>=3.10.0 (from huggingface-hub<2.0,>=0.16.4->tokenizers==0.23.2->-r requirements.txt (line 42))
+  Downloading filelock-3.32.6-py3-none-any.whl (100 kB)
+Collecting fsspec>=2023.5.0 (from huggingface-hub<2.0,>=0.16.4->tokenizers==0.23.2->-r requirements.txt (line 42))
+  Downloading fsspec-2026.7.0-py3-none-any.whl (206 kB)
+Collecting hf-xet<2.0.0,>=1.5.2 (from huggingface-hub<2.0,>=0.16.4->tokenizers==0.23.2->-r requirements.txt (line 42))
+  Downloading hf_xet-1.6.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 895.7 kB/s  0:00:04
+Collecting tqdm>=4.42.1 (from huggingface-hub<2.0,>=0.16.4->tokenizers==0.23.2->-r requirements.txt (line 42))
+  Downloading tqdm-4.70.0-py3-none-any.whl (80 kB)
+Collecting pycparser (from cffi>=1.12->cryptography==44.0.0->-r requirements.txt (line 31))
+  Using cached pycparser-3.0-py3-none-any.whl (48 kB)
+Collecting MarkupSafe>=2.0 (from Mako->alembic==1.14.0->-r requirements.txt (line 21))
+  Using cached markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Building wheels for collected packages: jieba
+  Building wheel for jieba (pyproject.toml): started
+  Building wheel for jieba (pyproject.toml): finished with status 'done'
+  Created wheel for jieba: filename=jieba-0.42.1-py3-none-any.whl size=19314509 sha256=75f213122c57be9eb81e56805fc809f1ef0b995075e1e3e6efe088b61c3dbebf
+  Stored in directory: /root/.cache/pip/wheels/7b/3a/3e/1bf625b8dd63d53265aad527b244647c679dff9b60588a324f
+Successfully built jieba
+Installing collected packages: jieba, flatbuffers, XlsxWriter, websockets, uvloop, typing-extensions, tqdm, six, pyyaml, python-multipart, python-dotenv, PyMuPDF, PyJWT, pycparser, protobuf, Pillow, packaging, numpy, MarkupSafe, lxml, idna, httptools, hf-xet, h11, greenlet, fsspec, filelock, et-xmlfile, dnspython, click, certifi, bcrypt, annotated-types, aiosqlite, aiofiles, uvicorn, sqlalchemy, python-pptx, python-docx, python-dateutil, pydantic-core, openpyxl, onnxruntime, Mako, httpcore, email-validator, cffi, anyio, watchfiles, starlette, pydantic, httpx, cryptography, alembic, pydantic-settings, huggingface-hub, fastapi, tokenizers
+
+Successfully installed Mako-1.4.1 MarkupSafe-3.0.3 Pillow-12.3.0 PyJWT-2.10.1 PyMuPDF-1.28.2 XlsxWriter-3.2.9 aiofiles-24.1.0 aiosqlite-0.22.1 alembic-1.14.0 annotated-types-0.8.0 anyio-4.15.1 bcrypt-4.2.1 certifi-2026.7.22 cffi-2.1.1 click-8.5.0 cryptography-44.0.0 dnspython-2.8.0 email-validator-2.2.0 et-xmlfile-2.0.0 fastapi-0.115.6 filelock-3.32.6 flatbuffers-25.12.19 fsspec-2026.7.0 greenlet-3.1.1 h11-0.16.0 hf-xet-1.6.0 httpcore-1.0.9 httptools-0.8.0 httpx-0.28.1 huggingface-hub-1.31.0 idna-3.19 jieba-0.42.1 lxml-6.1.3 numpy-2.5.3 onnxruntime-1.29.0 openpyxl-3.1.5 packaging-26.3 protobuf-7.36.1 pycparser-3.0 pydantic-2.10.4 pydantic-core-2.27.2 pydantic-settings-2.7.0 python-dateutil-2.9.0.post0 python-docx-1.2.0 python-dotenv-1.2.3 python-multipart-0.0.20 python-pptx-1.0.2 pyyaml-6.0.3 six-1.17.0 sqlalchemy-2.0.36 starlette-0.41.3 tokenizers-0.23.2 tqdm-4.70.0 typing-extensions-4.16.0 uvicorn-0.34.0 uvloop-0.22.1 watchfiles-1.2.0 websockets-17.1

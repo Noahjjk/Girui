@@ -1,0 +1,1755 @@
+INFO:     Started server process [1530930]
+INFO:     Waiting for application startup.
+2026-09-10 23:25:01,533 [INFO] jirui: ====================================================================
+2026-09-10 23:25:01,533 [INFO] jirui: 极睿知识库 后端启动，版本 0.1.0
+2026-09-10 23:25:01,533 [INFO] jirui: ====================================================================
+2026-09-10 23:25:01,534 [INFO] app.db.seed: 本地嵌入模型就绪：/opt/jirui/models/bge-small-zh-v1.5
+2026-09-10 23:25:01,534 [INFO] app.db.seed: 检索索引库：/opt/jirui/data/index/chunks.db
+2026-09-10 23:25:01,584 [INFO] app.db.session: 数据库表结构已同步（SQLite）
+2026-09-10 23:25:01,902 [WARNING] app.db.seed: 已创建初始管理员账号：admin（请立即登录并修改密码）
+2026-09-10 23:25:01,904 [WARNING] app.db.seed: 未配置 DEFAULT_LLM_API_KEY，跳过默认模型初始化。请登录后到「模型管理」手动添加模型。
+2026-09-10 23:25:01,926 [INFO] app.services.index_store: 检索索引库就绪 path=/opt/jirui/data/index/chunks.db 分词=jieba
+2026-09-10 23:25:01,926 [INFO] app.services.ingest: 文档入库工作者已启动
+2026-09-10 23:25:01,926 [INFO] jirui: 就绪，监听 /api/v1
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2026-09-10 23:25:20,346 [INFO] jirui: GET /api/v1/system/health -> 200 (1ms)
+2026-09-10 23:25:20,364 [INFO] jirui: GET /api/v1/system/info -> 401 (2ms)
+2026-09-10 23:25:20,377 [INFO] jirui: GET / -> 200 (0ms)
+2026-09-10 23:25:20,389 [INFO] jirui: GET /api/v1/knowledge/datasets -> 404 (0ms)
+2026-09-10 23:25:38,107 [INFO] jirui: GET /api/v1/system/health -> 200 (0ms)
+2026-09-10 23:26:35,565 [INFO] jirui: GET /api/v1/system/health -> 200 (0ms)
+2026-09-10 23:26:35,602 [INFO] jirui: GET /api/v1/users -> 401 (1ms)
+2026-09-10 23:26:35,680 [INFO] jirui: GET /api/v1/system/info -> 401 (1ms)
+2026-09-10 23:26:36,079 [INFO] jirui: POST /api/v1/auth/login -> 401 (385ms)
+2026-09-10 23:26:36,474 [INFO] jirui: POST /api/v1/auth/login -> 200 (314ms)
+2026-09-10 23:26:36,683 [INFO] app.services.embedding: 本地嵌入模型已加载 path=model_quantized.onnx inputs=['input_ids', 'attention_mask', 'token_type_ids'] output=sentence_embedding dim=512
+2026-09-10 23:26:36,685 [INFO] jirui: GET /api/v1/system/info -> 200 (194ms)
+2026-09-10 23:26:36,731 [INFO] jirui: GET /api/v1/users -> 200 (11ms)
+2026-09-10 23:26:36,781 [INFO] jirui: GET /api/v1/knowledge/datasets -> 404 (0ms)
+2026-09-10 23:26:36,808 [INFO] jirui: GET /api/v1/models -> 200 (10ms)
+2026-09-10 23:26:36,899 [INFO] jirui: GET /api/v1/logs -> 200 (14ms)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-09-10 23:27:34,354 [INFO] jirui: 后端退出
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1530930]
+INFO:     Started server process [1531481]
+INFO:     Waiting for application startup.
+2026-09-10 23:27:36,934 [INFO] jirui: ====================================================================
+2026-09-10 23:27:36,934 [INFO] jirui: 极睿知识库 后端启动，版本 0.1.0
+2026-09-10 23:27:36,934 [INFO] jirui: ====================================================================
+2026-09-10 23:27:36,934 [INFO] app.db.seed: 本地嵌入模型就绪：/opt/jirui/models/bge-small-zh-v1.5
+2026-09-10 23:27:36,934 [INFO] app.db.seed: 检索索引库：/opt/jirui/data/index/chunks.db
+2026-09-10 23:27:36,945 [INFO] app.db.session: 数据库表结构已同步（SQLite）
+2026-09-10 23:27:36,977 [WARNING] app.db.seed: 未配置 DEFAULT_LLM_API_KEY，跳过默认模型初始化。请登录后到「模型管理」手动添加模型。
+2026-09-10 23:27:36,987 [INFO] app.services.index_store: 检索索引库就绪 path=/opt/jirui/data/index/chunks.db 分词=jieba
+2026-09-10 23:27:36,987 [INFO] app.services.ingest: 文档入库工作者已启动
+2026-09-10 23:27:36,988 [INFO] jirui: 就绪，监听 /api/v1
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2026-09-10 23:28:37,435 [INFO] jirui: POST /api/v1/auth/login -> 200 (411ms)
+2026-09-10 23:28:37,458 [INFO] jirui: GET /api/v1/kb -> 200 (15ms)
+2026-09-10 23:28:37,571 [INFO] jirui: POST /api/v1/kb -> 201 (64ms)
+2026-09-10 23:28:37,938 [INFO] app.services.storage: 文件已保存 kb_3/20260910/63fe2c69795049249882f6c9278d3d85.md (1901 bytes)
+2026-09-10 23:28:37,941 [INFO] app.services.storage: 文件已保存 kb_3/20260910/fa075c0eb85b4a378ec578d075ccae31.docx (37710 bytes)
+2026-09-10 23:28:37,942 [INFO] app.services.storage: 文件已保存 kb_3/20260910/17742b5ea97e4bd084ca26964b190956.pdf (3374 bytes)
+2026-09-10 23:28:37,967 [INFO] jirui: POST /api/v1/kb/3/documents/upload -> 200 (49ms)
+2026-09-10 23:28:38,095 [INFO] app.services.embedding: 本地嵌入模型已加载 path=model_quantized.onnx inputs=['input_ids', 'attention_mask', 'token_type_ids'] output=sentence_embedding dim=512
+2026-09-10 23:28:38,112 [INFO] jirui: GET /api/v1/kb/3/documents -> 200 (67ms)
+2026-09-10 23:28:39,289 [INFO] app.services.ingest: 文档解析完成 name=员工考勤与请假管理办法.md 片段=3 字数=676 耗时=1.3s
+2026-09-10 23:28:39,728 [INFO] app.services.ingest: 文档解析完成 name=差旅报销实施细则.docx 片段=2 字数=567 耗时=0.4s
+2026-09-10 23:28:40,351 [INFO] app.services.ingest: 文档解析完成 name=机房运维与数据安全规范.pdf 片段=3 字数=654 耗时=0.6s
+2026-09-10 23:28:43,160 [INFO] jirui: GET /api/v1/kb/3/documents -> 200 (16ms)
+2026-09-10 23:28:43,187 [INFO] jirui: GET /api/v1/kb/3/documents/3/chunks -> 200 (15ms)
+2026-09-10 23:28:43,255 [INFO] jirui: GET /api/v1/kb/3/documents/2/chunks -> 200 (15ms)
+2026-09-10 23:28:43,278 [INFO] jirui: GET /api/v1/kb/3/documents/1/chunks -> 200 (15ms)
+2026-09-10 23:28:43,300 [INFO] jirui: GET /api/v1/kb/3 -> 200 (13ms)
+2026-09-10 23:29:33,580 [INFO] jirui: POST /api/v1/auth/login -> 200 (331ms)
+2026-09-10 23:29:33,638 [INFO] jirui: GET /api/v1/kb -> 200 (15ms)
+2026-09-10 23:29:33,670 [INFO] jirui: GET /api/v1/users -> 200 (23ms)
+2026-09-10 23:29:34,082 [INFO] jirui: POST /api/v1/users -> 201 (359ms)
+2026-09-10 23:29:34,449 [INFO] jirui: POST /api/v1/users -> 201 (314ms)
+2026-09-10 23:29:34,476 [INFO] jirui: POST /api/v1/kb -> 201 (18ms)
+2026-09-10 23:29:34,495 [INFO] app.services.storage: 文件已保存 kb_4/20260910/2640f393183a43b1a5f23ccad396aafe.md (1277 bytes)
+2026-09-10 23:29:34,497 [INFO] app.services.storage: 文件已保存 kb_4/20260910/222243c4efd042489fae6b454bd6898b.md (1420 bytes)
+2026-09-10 23:29:34,521 [INFO] jirui: POST /api/v1/kb/4/documents/upload -> 200 (37ms)
+2026-09-10 23:29:34,579 [INFO] jirui: GET /api/v1/kb/4/documents -> 200 (33ms)
+2026-09-10 23:29:34,747 [INFO] app.services.ingest: 文档解析完成 name=公开-产品功能说明书.md 片段=2 字数=514 耗时=0.2s
+2026-09-10 23:29:35,018 [INFO] app.services.ingest: 文档解析完成 name=机密-薪酬结构与职级管理办法.md 片段=2 字数=525 耗时=0.3s
+2026-09-10 23:29:39,618 [INFO] jirui: GET /api/v1/kb/4/documents -> 200 (14ms)
+2026-09-10 23:29:39,732 [ERROR] jirui: 数据库错误
+Traceback (most recent call last):
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/backend/app/api/v1/knowledge.py", line 504, in update_document
+    return document_to_out(doc)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/backend/app/schemas/converters.py", line 145, in document_to_out
+    updated_at=doc.updated_at,
+               ^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/sqlalchemy/orm/attributes.py", line 566, in __get__
+    return self.impl.get(state, dict_)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/sqlalchemy/orm/attributes.py", line 1086, in get
+    value = self._fire_loader_callables(state, key, passive)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/sqlalchemy/orm/attributes.py", line 1116, in _fire_loader_callables
+    return state._load_expired(state, passive)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 803, in _load_expired
+    self.manager.expired_attribute_loader(self, toload, passive)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 1670, in load_scalar_attributes
+    result = load_on_ident(
+             ^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 509, in load_on_ident
+    return load_on_pk_identity(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 694, in load_on_pk_identity
+    session.execute(
+  File "/opt/jirui/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2362, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2247, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/opt/jirui/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2358, in _handle_dbapi_exception
+    raise exc_info[1].with_traceback(exc_info[2])
+  File "/opt/jirui/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/opt/jirui/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/sqlalchemy/dialects/sqlite/aiosqlite.py", line 147, in execute
+    self._adapt_connection._handle_exception(error)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/sqlalchemy/dialects/sqlite/aiosqlite.py", line 298, in _handle_exception
+    raise error
+  File "/opt/jirui/venv/lib/python3.12/site-packages/sqlalchemy/dialects/sqlite/aiosqlite.py", line 124, in execute
+    _cursor = self.await_(self._connection.cursor())
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 123, in await_only
+    raise exc.MissingGreenlet(
+sqlalchemy.exc.MissingGreenlet: greenlet_spawn has not been called; can't call await_only() here. Was IO attempted in an unexpected place? (Background on this error at: https://sqlalche.me/e/20/xd2s)
+2026-09-10 23:29:39,752 [INFO] jirui: PATCH /api/v1/kb/4/documents/5 -> 500 (88ms)
+2026-09-10 23:29:39,804 [INFO] jirui: POST /api/v1/kb/4/permissions -> 200 (37ms)
+2026-09-10 23:29:39,888 [INFO] jirui: POST /api/v1/kb/4/permissions -> 200 (76ms)
+2026-09-10 23:29:39,910 [INFO] jirui: GET /api/v1/kb/4/documents/4/chunks -> 200 (14ms)
+2026-09-10 23:29:39,939 [INFO] jirui: GET /api/v1/kb/4/documents/5/chunks -> 200 (19ms)
+2026-09-10 23:29:40,079 [INFO] app.services.chat: 检索完成 user=admin 候选=4 过滤后=4 丢弃=0 问题='P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-10 23:29:40,082 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (110ms)
+2026-09-10 23:29:40,135 [INFO] app.services.chat: 检索完成 user=admin 候选=4 过滤后=4 丢弃=0 问题='系统支持上传哪些格式的文档，检索是怎么实现的'
+2026-09-10 23:29:40,137 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (45ms)
+2026-09-10 23:29:40,632 [INFO] jirui: POST /api/v1/auth/login -> 200 (348ms)
+2026-09-10 23:29:40,722 [INFO] app.services.chat: 检索完成 user=zhangwei 候选=4 过滤后=4 丢弃=0 问题='P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-10 23:29:40,724 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (84ms)
+2026-09-10 23:29:40,822 [INFO] app.services.chat: 检索完成 user=zhangwei 候选=4 过滤后=4 丢弃=0 问题='系统支持上传哪些格式的文档，检索是怎么实现的'
+2026-09-10 23:29:40,824 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (89ms)
+2026-09-10 23:29:40,870 [INFO] jirui: POST /api/v1/kb/4/acls -> 201 (37ms)
+2026-09-10 23:29:40,962 [INFO] app.services.chat: 检索完成 user=zhangwei 候选=4 过滤后=3 丢弃=1 问题='P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-10 23:29:40,964 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (69ms)
+2026-09-10 23:29:41,053 [INFO] jirui: POST /api/v1/kb/4/acls -> 201 (58ms)
+2026-09-10 23:29:41,224 [INFO] app.services.chat: 检索完成 user=zhangwei 候选=4 过滤后=2 丢弃=2 问题='系统支持上传哪些格式的文档，检索是怎么实现的'
+2026-09-10 23:29:41,226 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (123ms)
+2026-09-10 23:29:41,605 [INFO] jirui: POST /api/v1/auth/login -> 200 (299ms)
+2026-09-10 23:29:41,640 [INFO] app.services.chat: 检索完成 user=lina 候选=4 过滤后=4 丢弃=0 问题='P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-10 23:29:41,642 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (29ms)
+2026-09-10 23:29:41,733 [INFO] app.services.chat: 检索完成 user=lina 候选=4 过滤后=4 丢弃=0 问题='系统支持上传哪些格式的文档，检索是怎么实现的'
+2026-09-10 23:29:41,735 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (85ms)
+2026-09-10 23:29:41,849 [INFO] app.services.chat: 检索完成 user=admin 候选=4 过滤后=4 丢弃=0 问题='系统支持上传哪些格式的文档，检索是怎么实现的 另外 P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-10 23:29:41,851 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (107ms)
+2026-09-10 23:29:42,222 [INFO] jirui: POST /api/v1/auth/login -> 200 (299ms)
+2026-09-10 23:29:42,263 [INFO] app.services.chat: 检索完成 user=zhangwei 候选=4 过滤后=2 丢弃=2 问题='系统支持上传哪些格式的文档，检索是怎么实现的 另外 P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-10 23:29:42,265 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (34ms)
+2026-09-10 23:29:42,640 [INFO] jirui: POST /api/v1/auth/login -> 200 (301ms)
+2026-09-10 23:29:42,683 [INFO] app.services.chat: 检索完成 user=lina 候选=4 过滤后=4 丢弃=0 问题='系统支持上传哪些格式的文档，检索是怎么实现的 另外 P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-10 23:29:42,685 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (36ms)
+2026-09-10 23:29:42,752 [INFO] jirui: GET /api/v1/kb/4/diagnose/2 -> 200 (16ms)
+2026-09-10 23:29:42,768 [INFO] jirui: GET /api/v1/kb/4/acls -> 200 (8ms)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-09-10 23:31:22,238 [INFO] jirui: 后端退出
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1531481]
+INFO:     Started server process [1531969]
+INFO:     Waiting for application startup.
+2026-09-10 23:31:24,725 [INFO] jirui: ====================================================================
+2026-09-10 23:31:24,725 [INFO] jirui: 极睿知识库 后端启动，版本 0.1.0
+2026-09-10 23:31:24,725 [INFO] jirui: ====================================================================
+2026-09-10 23:31:24,725 [INFO] app.db.seed: 本地嵌入模型就绪：/opt/jirui/models/bge-small-zh-v1.5
+2026-09-10 23:31:24,725 [INFO] app.db.seed: 检索索引库：/opt/jirui/data/index/chunks.db
+2026-09-10 23:31:24,736 [INFO] app.db.session: 数据库表结构已同步（SQLite）
+2026-09-10 23:31:24,768 [WARNING] app.db.seed: 未配置 DEFAULT_LLM_API_KEY，跳过默认模型初始化。请登录后到「模型管理」手动添加模型。
+2026-09-10 23:31:24,780 [INFO] app.services.index_store: 检索索引库就绪 path=/opt/jirui/data/index/chunks.db 分词=jieba
+2026-09-10 23:31:24,780 [INFO] app.services.ingest: 文档入库工作者已启动
+2026-09-10 23:31:24,780 [INFO] jirui: 就绪，监听 /api/v1
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2026-09-10 23:31:37,803 [INFO] jirui: POST /api/v1/auth/login -> 200 (352ms)
+2026-09-10 23:31:37,854 [INFO] jirui: GET /api/v1/kb -> 200 (15ms)
+2026-09-10 23:31:37,875 [INFO] app.services.retriever: 已删除本地索引数据集 ['464a385dc62341efbefd071ec5438643']，清理片段 4 条
+2026-09-10 23:31:37,894 [INFO] jirui: DELETE /api/v1/kb/4 -> 200 (31ms)
+2026-09-10 23:31:37,950 [INFO] jirui: GET /api/v1/users -> 200 (12ms)
+2026-09-10 23:31:37,981 [INFO] jirui: DELETE /api/v1/users/2 -> 200 (22ms)
+2026-09-10 23:31:38,004 [INFO] jirui: DELETE /api/v1/users/3 -> 200 (16ms)
+2026-09-10 23:31:38,408 [INFO] jirui: POST /api/v1/users -> 201 (369ms)
+2026-09-10 23:31:38,757 [INFO] jirui: POST /api/v1/users -> 201 (307ms)
+2026-09-10 23:31:38,788 [INFO] jirui: POST /api/v1/kb -> 201 (23ms)
+2026-09-10 23:31:38,809 [INFO] app.services.storage: 文件已保存 kb_4/20260910/9451091332a04f48ad60af36617e0436.md (1277 bytes)
+2026-09-10 23:31:38,810 [INFO] app.services.storage: 文件已保存 kb_4/20260910/54b622ccd8144c57a14963accad5829a.md (1420 bytes)
+2026-09-10 23:31:38,835 [INFO] jirui: POST /api/v1/kb/4/documents/upload -> 200 (38ms)
+2026-09-10 23:31:38,961 [INFO] app.services.embedding: 本地嵌入模型已加载 path=model_quantized.onnx inputs=['input_ids', 'attention_mask', 'token_type_ids'] output=sentence_embedding dim=512
+2026-09-10 23:31:38,973 [INFO] jirui: GET /api/v1/kb/4/documents -> 200 (96ms)
+2026-09-10 23:31:40,066 [INFO] app.services.ingest: 文档解析完成 name=公开-产品功能说明书.md 片段=2 字数=514 耗时=1.2s
+2026-09-10 23:31:40,339 [INFO] app.services.ingest: 文档解析完成 name=机密-薪酬结构与职级管理办法.md 片段=2 字数=525 耗时=0.3s
+2026-09-10 23:31:44,007 [INFO] jirui: GET /api/v1/kb/4/documents -> 200 (11ms)
+2026-09-10 23:31:44,105 [INFO] jirui: PATCH /api/v1/kb/4/documents/5 -> 200 (89ms)
+2026-09-10 23:31:44,211 [INFO] jirui: POST /api/v1/kb/4/permissions -> 200 (89ms)
+2026-09-10 23:31:44,307 [INFO] jirui: POST /api/v1/kb/4/permissions -> 200 (86ms)
+2026-09-10 23:31:44,330 [INFO] jirui: GET /api/v1/kb/4/documents/4/chunks -> 200 (14ms)
+2026-09-10 23:31:44,353 [INFO] jirui: GET /api/v1/kb/4/documents/5/chunks -> 200 (13ms)
+2026-09-10 23:31:44,532 [INFO] app.services.chat: 检索完成 user=admin 候选=4 过滤后=4 丢弃=0 问题='P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-10 23:31:44,535 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (142ms)
+2026-09-10 23:31:44,627 [INFO] app.services.chat: 检索完成 user=admin 候选=4 过滤后=4 丢弃=0 问题='系统支持上传哪些格式的文档，检索是怎么实现的'
+2026-09-10 23:31:44,630 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (84ms)
+2026-09-10 23:31:45,092 [INFO] jirui: POST /api/v1/auth/login -> 200 (365ms)
+2026-09-10 23:31:45,146 [INFO] app.services.chat: 检索完成 user=zhangwei 候选=2 过滤后=2 丢弃=0 问题='P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-10 23:31:45,150 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (42ms)
+2026-09-10 23:31:45,241 [INFO] app.services.chat: 检索完成 user=zhangwei 候选=2 过滤后=2 丢弃=0 问题='系统支持上传哪些格式的文档，检索是怎么实现的'
+2026-09-10 23:31:45,244 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (84ms)
+2026-09-10 23:31:45,335 [INFO] jirui: POST /api/v1/kb/4/acls -> 201 (81ms)
+2026-09-10 23:31:45,436 [INFO] app.services.chat: 检索完成 user=zhangwei 候选=2 过滤后=2 丢弃=0 问题='P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-10 23:31:45,438 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (94ms)
+2026-09-10 23:31:45,528 [INFO] jirui: POST /api/v1/kb/4/acls -> 201 (73ms)
+2026-09-10 23:31:45,641 [INFO] app.services.chat: 检索完成 user=zhangwei 候选=2 过滤后=1 丢弃=1 问题='系统支持上传哪些格式的文档，检索是怎么实现的'
+2026-09-10 23:31:45,643 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (102ms)
+2026-09-10 23:31:46,025 [INFO] jirui: POST /api/v1/auth/login -> 200 (300ms)
+2026-09-10 23:31:46,059 [INFO] app.services.chat: 检索完成 user=lina 候选=2 过滤后=2 丢弃=0 问题='P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-10 23:31:46,060 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (27ms)
+2026-09-10 23:31:46,152 [INFO] app.services.chat: 检索完成 user=lina 候选=2 过滤后=2 丢弃=0 问题='系统支持上传哪些格式的文档，检索是怎么实现的'
+2026-09-10 23:31:46,154 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (86ms)
+2026-09-10 23:31:46,259 [INFO] app.services.chat: 检索完成 user=admin 候选=4 过滤后=4 丢弃=0 问题='系统支持上传哪些格式的文档，检索是怎么实现的 另外 P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-10 23:31:46,261 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (98ms)
+2026-09-10 23:31:46,636 [INFO] jirui: POST /api/v1/auth/login -> 200 (298ms)
+2026-09-10 23:31:46,686 [INFO] app.services.chat: 检索完成 user=zhangwei 候选=2 过滤后=1 丢弃=1 问题='系统支持上传哪些格式的文档，检索是怎么实现的 另外 P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-10 23:31:46,688 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (41ms)
+2026-09-10 23:31:47,053 [INFO] jirui: POST /api/v1/auth/login -> 200 (300ms)
+2026-09-10 23:31:47,096 [INFO] app.services.chat: 检索完成 user=lina 候选=2 过滤后=2 丢弃=0 问题='系统支持上传哪些格式的文档，检索是怎么实现的 另外 P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-10 23:31:47,098 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (36ms)
+2026-09-10 23:31:47,168 [INFO] jirui: GET /api/v1/kb/4/diagnose/2 -> 200 (16ms)
+2026-09-10 23:31:47,189 [INFO] jirui: GET /api/v1/kb/4/acls -> 200 (8ms)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-09-10 23:38:14,324 [INFO] jirui: 后端退出
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1531969]
+INFO:     Started server process [1532183]
+INFO:     Waiting for application startup.
+2026-09-10 23:38:16,591 [INFO] jirui: ====================================================================
+2026-09-10 23:38:16,591 [INFO] jirui: 极睿知识库 后端启动，版本 0.1.0
+2026-09-10 23:38:16,591 [INFO] jirui: ====================================================================
+2026-09-10 23:38:16,591 [INFO] app.db.seed: 本地嵌入模型就绪：/opt/jirui/models/bge-small-zh-v1.5
+2026-09-10 23:38:16,591 [INFO] app.db.seed: 检索索引库：/opt/jirui/data/index/chunks.db
+2026-09-10 23:38:16,602 [INFO] app.db.session: 数据库表结构已同步（SQLite）
+2026-09-10 23:38:16,635 [WARNING] app.db.seed: 未配置 DEFAULT_LLM_API_KEY，跳过默认模型初始化。请登录后到「模型管理」手动添加模型。
+2026-09-10 23:38:16,646 [INFO] app.services.index_store: 检索索引库就绪 path=/opt/jirui/data/index/chunks.db 分词=jieba
+2026-09-10 23:38:16,646 [INFO] app.services.ingest: 文档入库工作者已启动
+2026-09-10 23:38:16,646 [INFO] jirui: 就绪，监听 /api/v1
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2026-09-10 23:38:29,601 [INFO] jirui: POST /api/v1/auth/login -> 200 (394ms)
+2026-09-10 23:38:29,637 [INFO] jirui: GET /api/v1/kb -> 200 (26ms)
+2026-09-10 23:38:29,713 [INFO] app.services.retriever: 已删除本地索引数据集 ['bad02d51a63a4b38872bffcc2bc59ca7']，清理片段 4 条
+2026-09-10 23:38:29,736 [INFO] jirui: DELETE /api/v1/kb/4 -> 200 (42ms)
+2026-09-10 23:38:29,761 [INFO] jirui: GET /api/v1/users -> 200 (16ms)
+2026-09-10 23:38:29,821 [INFO] jirui: DELETE /api/v1/users/2 -> 200 (26ms)
+2026-09-10 23:38:29,850 [INFO] jirui: DELETE /api/v1/users/3 -> 200 (20ms)
+2026-09-10 23:38:30,271 [INFO] jirui: POST /api/v1/users -> 201 (374ms)
+2026-09-10 23:38:30,609 [INFO] jirui: POST /api/v1/users -> 201 (302ms)
+2026-09-10 23:38:30,639 [INFO] jirui: POST /api/v1/kb -> 201 (22ms)
+2026-09-10 23:38:30,672 [INFO] app.services.storage: 文件已保存 kb_4/20260910/68d97d0965604390bbf44aa5ae93d1a0.md (1277 bytes)
+2026-09-10 23:38:30,673 [INFO] app.services.storage: 文件已保存 kb_4/20260910/e9e524a1ca9940a7b0ef979b5654ac93.md (1420 bytes)
+2026-09-10 23:38:30,735 [INFO] jirui: POST /api/v1/kb/4/documents/upload -> 200 (75ms)
+2026-09-10 23:38:30,819 [INFO] app.services.embedding: 本地嵌入模型已加载 path=model_quantized.onnx inputs=['input_ids', 'attention_mask', 'token_type_ids'] output=sentence_embedding dim=512
+2026-09-10 23:38:30,838 [INFO] jirui: GET /api/v1/kb/4/documents -> 200 (69ms)
+2026-09-10 23:38:31,918 [INFO] app.services.ingest: 文档解析完成 name=公开-产品功能说明书.md 片段=2 字数=514 耗时=1.2s
+2026-09-10 23:38:32,192 [INFO] app.services.ingest: 文档解析完成 name=机密-薪酬结构与职级管理办法.md 片段=2 字数=525 耗时=0.3s
+2026-09-10 23:38:35,892 [INFO] jirui: GET /api/v1/kb/4/documents -> 200 (14ms)
+2026-09-10 23:38:36,044 [INFO] jirui: PATCH /api/v1/kb/4/documents/5 -> 200 (102ms)
+2026-09-10 23:38:36,113 [INFO] jirui: POST /api/v1/kb/4/permissions -> 200 (57ms)
+2026-09-10 23:38:36,179 [INFO] jirui: POST /api/v1/kb/4/permissions -> 200 (30ms)
+2026-09-10 23:38:36,207 [INFO] jirui: GET /api/v1/kb/4/documents/4/chunks -> 200 (16ms)
+2026-09-10 23:38:36,261 [INFO] jirui: GET /api/v1/kb/4/documents/5/chunks -> 200 (14ms)
+2026-09-10 23:38:36,404 [INFO] app.services.chat: 检索完成 user=admin 候选=4 过滤后=4 丢弃=0 问题='P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-10 23:38:36,408 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (133ms)
+2026-09-10 23:38:36,493 [INFO] app.services.chat: 检索完成 user=admin 候选=4 过滤后=4 丢弃=0 问题='系统支持上传哪些格式的文档，检索是怎么实现的'
+2026-09-10 23:38:36,496 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (43ms)
+2026-09-10 23:38:36,932 [INFO] jirui: POST /api/v1/auth/login -> 200 (337ms)
+2026-09-10 23:38:37,003 [INFO] app.services.chat: 检索完成 user=zhangwei 候选=2 过滤后=2 丢弃=0 问题='P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-10 23:38:37,006 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (41ms)
+2026-09-10 23:38:37,098 [INFO] app.services.chat: 检索完成 user=zhangwei 候选=2 过滤后=2 丢弃=0 问题='系统支持上传哪些格式的文档，检索是怎么实现的'
+2026-09-10 23:38:37,101 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (84ms)
+2026-09-10 23:38:37,148 [INFO] jirui: POST /api/v1/kb/4/acls -> 201 (36ms)
+2026-09-10 23:38:37,250 [INFO] app.services.chat: 检索完成 user=zhangwei 候选=4 过滤后=3 丢弃=1 问题='P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-10 23:38:37,253 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (84ms)
+2026-09-10 23:38:37,330 [INFO] jirui: POST /api/v1/kb/4/acls -> 201 (59ms)
+2026-09-10 23:38:37,443 [INFO] app.services.chat: 检索完成 user=zhangwei 候选=4 过滤后=2 丢弃=2 问题='系统支持上传哪些格式的文档，检索是怎么实现的'
+2026-09-10 23:38:37,445 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (72ms)
+2026-09-10 23:38:37,878 [INFO] jirui: POST /api/v1/auth/login -> 200 (299ms)
+2026-09-10 23:38:37,914 [INFO] app.services.chat: 检索完成 user=lina 候选=2 过滤后=2 丢弃=0 问题='P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-10 23:38:37,915 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (30ms)
+2026-09-10 23:38:38,012 [INFO] app.services.chat: 检索完成 user=lina 候选=2 过滤后=2 丢弃=0 问题='系统支持上传哪些格式的文档，检索是怎么实现的'
+2026-09-10 23:38:38,013 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (89ms)
+2026-09-10 23:38:38,118 [INFO] app.services.chat: 检索完成 user=admin 候选=4 过滤后=4 丢弃=0 问题='系统支持上传哪些格式的文档，检索是怎么实现的 另外 P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-10 23:38:38,120 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (96ms)
+2026-09-10 23:38:38,505 [INFO] jirui: POST /api/v1/auth/login -> 200 (298ms)
+2026-09-10 23:38:38,547 [INFO] app.services.chat: 检索完成 user=zhangwei 候选=4 过滤后=2 丢弃=2 问题='系统支持上传哪些格式的文档，检索是怎么实现的 另外 P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-10 23:38:38,549 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (36ms)
+2026-09-10 23:38:39,000 [INFO] jirui: POST /api/v1/auth/login -> 200 (299ms)
+2026-09-10 23:38:39,045 [INFO] app.services.chat: 检索完成 user=lina 候选=2 过滤后=2 丢弃=0 问题='系统支持上传哪些格式的文档，检索是怎么实现的 另外 P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-10 23:38:39,047 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (36ms)
+2026-09-10 23:38:39,074 [INFO] jirui: GET /api/v1/kb/4/diagnose/2 -> 200 (17ms)
+2026-09-10 23:38:39,124 [INFO] jirui: GET /api/v1/kb/4/acls -> 200 (8ms)
+2026-09-10 23:38:49,302 [INFO] jirui: POST /api/v1/auth/login -> 200 (326ms)
+2026-09-10 23:38:49,369 [INFO] jirui: GET /api/v1/kb -> 200 (10ms)
+2026-09-10 23:38:49,392 [INFO] jirui: GET /api/v1/users -> 200 (9ms)
+2026-09-10 23:38:49,471 [INFO] jirui: GET /api/v1/logs -> 200 (11ms)
+2026-09-10 23:39:21,209 [INFO] jirui: OPTIONS /api/v1/auth/login -> 200 (2ms)
+2026-09-10 23:39:22,072 [INFO] jirui: POST /api/v1/auth/login -> 200 (338ms)
+2026-09-10 23:39:56,455 [INFO] jirui: GET /api/v1/system/health -> 200 (1ms)
+2026-09-10 23:39:56,472 [INFO] jirui: GET /api/v1/users -> 401 (1ms)
+2026-09-10 23:39:56,534 [INFO] jirui: GET /api/v1/system/info -> 401 (1ms)
+2026-09-10 23:39:56,889 [INFO] jirui: POST /api/v1/auth/login -> 401 (328ms)
+2026-09-10 23:39:57,296 [INFO] jirui: POST /api/v1/auth/login -> 200 (329ms)
+2026-09-10 23:39:57,365 [INFO] jirui: GET /api/v1/system/info -> 200 (11ms)
+2026-09-10 23:39:57,411 [INFO] jirui: GET /api/v1/users -> 200 (10ms)
+2026-09-10 23:39:57,495 [INFO] jirui: GET /api/v1/kb -> 200 (10ms)
+2026-09-10 23:39:57,565 [INFO] jirui: GET /api/v1/models -> 200 (9ms)
+2026-09-10 23:39:57,588 [INFO] jirui: GET /api/v1/logs -> 200 (9ms)
+2026-09-10 23:50:39,868 [INFO] jirui: POST /api/v1/auth/login -> 200 (352ms)
+2026-09-10 23:50:39,927 [INFO] jirui: GET /api/v1/kb -> 200 (14ms)
+2026-09-10 23:50:40,034 [INFO] jirui: POST /api/v1/kb -> 201 (99ms)
+2026-09-10 23:50:40,894 [INFO] app.services.storage: 文件已保存 kb_5/20260910/40e1a3cf48084b288adffa8fad787f73.txt (1585098 bytes)
+2026-09-10 23:50:41,143 [INFO] jirui: POST /api/v1/kb/5/documents/upload -> 200 (513ms)
+2026-09-10 23:50:41,729 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (37ms)
+2026-09-10 23:50:52,483 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (49ms)
+2026-09-10 23:51:03,208 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (45ms)
+2026-09-10 23:51:14,056 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (37ms)
+2026-09-10 23:51:24,730 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (45ms)
+2026-09-10 23:51:35,395 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (46ms)
+2026-09-10 23:51:46,032 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (27ms)
+2026-09-10 23:51:56,853 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (36ms)
+2026-09-10 23:52:07,538 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (43ms)
+2026-09-10 23:52:18,275 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (37ms)
+2026-09-10 23:52:29,113 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (41ms)
+2026-09-10 23:52:39,826 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (65ms)
+2026-09-10 23:52:50,561 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (44ms)
+2026-09-10 23:53:01,294 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (48ms)
+2026-09-10 23:53:12,060 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (44ms)
+2026-09-10 23:53:22,898 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (59ms)
+2026-09-10 23:53:33,700 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (73ms)
+2026-09-10 23:53:44,406 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (43ms)
+2026-09-10 23:53:55,095 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (67ms)
+2026-09-10 23:54:05,711 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (43ms)
+2026-09-10 23:54:16,354 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (42ms)
+2026-09-10 23:54:27,002 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (38ms)
+2026-09-10 23:54:37,674 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (67ms)
+2026-09-10 23:54:48,331 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (56ms)
+2026-09-10 23:54:59,037 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (30ms)
+2026-09-10 23:55:09,821 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (42ms)
+2026-09-10 23:55:15,015 [INFO] app.services.ingest: 文档解析完成 name=综合管理制度汇编-压测.txt 片段=2360 字数=549959 耗时=274.1s
+2026-09-10 23:55:20,649 [INFO] jirui: GET /api/v1/kb/5/documents -> 200 (10ms)
+2026-09-10 23:55:21,313 [INFO] jirui: GET /api/v1/kb/5/documents/6 -> 405 (1ms)
+2026-09-10 23:55:22,102 [INFO] app.services.chat: 检索完成 user=admin 候选=30 过滤后=5 丢弃=0 问题='五十万元以上的支出需要谁审批'
+2026-09-10 23:55:22,104 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (178ms)
+2026-09-10 23:55:23,248 [INFO] app.services.retriever: 已删除本地索引数据集 ['9583362a70ce44429357b99e0c5cb166']，清理片段 2360 条
+2026-09-10 23:55:23,266 [INFO] jirui: DELETE /api/v1/kb/5 -> 200 (1133ms)
+INFO:     Started server process [829]
+INFO:     Waiting for application startup.
+2026-09-11 06:24:11,776 [INFO] jirui: ====================================================================
+2026-09-11 06:24:11,776 [INFO] jirui: 极睿知识库 后端启动，版本 0.1.0
+2026-09-11 06:24:11,776 [INFO] jirui: ====================================================================
+2026-09-11 06:24:11,777 [INFO] app.db.seed: 本地嵌入模型就绪：/opt/jirui/models/bge-small-zh-v1.5
+2026-09-11 06:24:11,777 [INFO] app.db.seed: 检索索引库：/opt/jirui/data/index/chunks.db
+2026-09-11 06:24:11,791 [INFO] app.db.session: 数据库表结构已同步（SQLite）
+2026-09-11 06:24:11,826 [WARNING] app.db.seed: 未配置 DEFAULT_LLM_API_KEY，跳过默认模型初始化。请登录后到「模型管理」手动添加模型。
+2026-09-11 06:24:11,860 [INFO] app.services.index_store: 检索索引库就绪 path=/opt/jirui/data/index/chunks.db 分词=jieba
+2026-09-11 06:24:11,860 [INFO] app.services.ingest: 文档入库工作者已启动
+2026-09-11 06:24:11,860 [INFO] jirui: 就绪，监听 /api/v1
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-09-11 09:05:08,678 [INFO] jirui: 后端退出
+INFO:     Application shutdown complete.
+INFO:     Finished server process [829]
+INFO:     Started server process [819]
+INFO:     Waiting for application startup.
+2026-09-11 09:05:52,875 [INFO] jirui: ====================================================================
+2026-09-11 09:05:52,875 [INFO] jirui: 极睿知识库 后端启动，版本 0.1.0
+2026-09-11 09:05:52,875 [INFO] jirui: ====================================================================
+2026-09-11 09:05:52,876 [INFO] app.db.seed: 本地嵌入模型就绪：/opt/jirui/models/bge-small-zh-v1.5
+2026-09-11 09:05:52,877 [INFO] app.db.seed: 检索索引库：/opt/jirui/data/index/chunks.db
+2026-09-11 09:05:52,890 [INFO] app.db.session: 数据库表结构已同步（SQLite）
+2026-09-11 09:05:52,924 [WARNING] app.db.seed: 未配置 DEFAULT_LLM_API_KEY，跳过默认模型初始化。请登录后到「模型管理」手动添加模型。
+2026-09-11 09:05:52,937 [INFO] app.services.index_store: 检索索引库就绪 path=/opt/jirui/data/index/chunks.db 分词=jieba
+2026-09-11 09:05:52,937 [INFO] app.services.ingest: 文档入库工作者已启动
+2026-09-11 09:05:52,937 [INFO] jirui: 就绪，监听 /api/v1
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-09-11 09:12:48,551 [INFO] jirui: 后端退出
+INFO:     Application shutdown complete.
+INFO:     Finished server process [819]
+INFO:     Started server process [1998]
+INFO:     Waiting for application startup.
+2026-09-11 09:12:50,834 [INFO] jirui: ====================================================================
+2026-09-11 09:12:50,835 [INFO] jirui: 极睿知识库 后端启动，版本 0.1.0
+2026-09-11 09:12:50,835 [INFO] jirui: ====================================================================
+2026-09-11 09:12:50,835 [INFO] app.db.seed: 本地嵌入模型就绪：/opt/jirui/models/bge-small-zh-v1.5
+2026-09-11 09:12:50,835 [INFO] app.db.seed: 检索索引库：/opt/jirui/data/index/chunks.db
+2026-09-11 09:12:50,847 [INFO] app.db.session: 数据库表结构已同步（SQLite）
+2026-09-11 09:12:50,881 [WARNING] app.db.seed: 未配置 DEFAULT_LLM_API_KEY，跳过默认模型初始化。请登录后到「模型管理」手动添加模型。
+2026-09-11 09:12:50,893 [INFO] app.services.index_store: 检索索引库就绪 path=/opt/jirui/data/index/chunks.db 分词=jieba
+2026-09-11 09:12:50,893 [INFO] app.services.ingest: 文档入库工作者已启动
+2026-09-11 09:12:50,894 [INFO] jirui: 就绪，监听 /api/v1
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2026-09-11 09:12:59,092 [INFO] jirui: GET /api/v1/system/health -> 200 (0ms)
+2026-09-11 09:12:59,104 [INFO] jirui: GET /api/v1/system/info -> 401 (1ms)
+2026-09-11 09:13:07,719 [INFO] jirui: POST /api/v1/auth/login -> 200 (477ms)
+2026-09-11 09:13:08,053 [INFO] app.services.embedding: 本地嵌入模型已加载 path=model_quantized.onnx inputs=['input_ids', 'attention_mask', 'token_type_ids'] output=sentence_embedding dim=512
+2026-09-11 09:13:08,055 [INFO] jirui: GET /api/v1/system/info -> 200 (301ms)
+2026-09-11 09:13:08,191 [INFO] jirui: GET /api/v1/kb -> 200 (14ms)
+2026-09-11 09:13:08,305 [INFO] jirui: GET /api/v1/users -> 200 (11ms)
+2026-09-11 09:13:08,375 [INFO] jirui: GET /api/v1/logs -> 200 (12ms)
+2026-09-11 09:13:33,241 [INFO] jirui: POST /api/v1/auth/login -> 200 (401ms)
+2026-09-11 09:13:33,278 [INFO] jirui: GET /api/v1/kb -> 200 (18ms)
+2026-09-11 09:13:33,369 [INFO] app.services.retriever: 已删除本地索引数据集 ['076aa9293a6944549c1dede84f2df3ce']，清理片段 4 条
+2026-09-11 09:13:33,401 [INFO] jirui: DELETE /api/v1/kb/4 -> 200 (52ms)
+2026-09-11 09:13:33,467 [INFO] jirui: GET /api/v1/users -> 200 (21ms)
+2026-09-11 09:13:33,507 [INFO] jirui: DELETE /api/v1/users/2 -> 200 (24ms)
+2026-09-11 09:13:33,574 [INFO] jirui: DELETE /api/v1/users/3 -> 200 (22ms)
+2026-09-11 09:13:34,010 [INFO] jirui: POST /api/v1/users -> 201 (421ms)
+2026-09-11 09:13:34,378 [INFO] jirui: POST /api/v1/users -> 201 (310ms)
+2026-09-11 09:13:34,418 [INFO] jirui: POST /api/v1/kb -> 201 (27ms)
+2026-09-11 09:13:34,496 [INFO] app.services.storage: 文件已保存 kb_4/20260911/8a811a77f40a4eefb8801f82dcb640a1.md (1277 bytes)
+2026-09-11 09:13:34,497 [INFO] app.services.storage: 文件已保存 kb_4/20260911/2f164c6a94484384a4e8a445cf65daf4.md (1420 bytes)
+2026-09-11 09:13:34,524 [INFO] jirui: POST /api/v1/kb/4/documents/upload -> 200 (50ms)
+2026-09-11 09:13:34,618 [INFO] jirui: GET /api/v1/kb/4/documents -> 200 (46ms)
+2026-09-11 09:13:35,558 [INFO] app.services.ingest: 文档解析完成 name=公开-产品功能说明书.md 片段=2 字数=514 耗时=1.1s
+2026-09-11 09:13:35,938 [INFO] app.services.ingest: 文档解析完成 name=机密-薪酬结构与职级管理办法.md 片段=2 字数=525 耗时=0.3s
+2026-09-11 09:13:39,709 [INFO] jirui: GET /api/v1/kb/4/documents -> 200 (9ms)
+2026-09-11 09:13:39,805 [INFO] jirui: PATCH /api/v1/kb/4/documents/5 -> 200 (75ms)
+2026-09-11 09:13:39,911 [INFO] jirui: POST /api/v1/kb/4/permissions -> 200 (85ms)
+2026-09-11 09:13:40,007 [INFO] jirui: POST /api/v1/kb/4/permissions -> 200 (74ms)
+2026-09-11 09:13:40,040 [INFO] jirui: GET /api/v1/kb/4/documents/4/chunks -> 200 (10ms)
+2026-09-11 09:13:40,106 [INFO] jirui: GET /api/v1/kb/4/documents/5/chunks -> 200 (9ms)
+2026-09-11 09:13:40,235 [INFO] app.services.chat: 检索完成 user=admin 候选=4 过滤后=4 丢弃=0 问题='P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-11 09:13:40,237 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (113ms)
+2026-09-11 09:13:40,341 [INFO] app.services.chat: 检索完成 user=admin 候选=4 过滤后=4 丢弃=0 问题='系统支持上传哪些格式的文档，检索是怎么实现的'
+2026-09-11 09:13:40,343 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (42ms)
+2026-09-11 09:13:40,906 [INFO] jirui: POST /api/v1/auth/login -> 200 (375ms)
+2026-09-11 09:13:40,967 [INFO] app.services.chat: 检索完成 user=zhangwei 候选=2 过滤后=2 丢弃=0 问题='P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-11 09:13:40,970 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (46ms)
+2026-09-11 09:13:41,155 [INFO] app.services.chat: 检索完成 user=zhangwei 候选=2 过滤后=2 丢弃=0 问题='系统支持上传哪些格式的文档，检索是怎么实现的'
+2026-09-11 09:13:41,158 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (127ms)
+2026-09-11 09:13:41,252 [INFO] jirui: POST /api/v1/kb/4/acls -> 201 (81ms)
+2026-09-11 09:13:41,361 [INFO] app.services.chat: 检索完成 user=zhangwei 候选=4 过滤后=3 丢弃=1 问题='P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-11 09:13:41,364 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (87ms)
+2026-09-11 09:13:41,449 [INFO] jirui: POST /api/v1/kb/4/acls -> 201 (71ms)
+2026-09-11 09:13:41,581 [INFO] app.services.chat: 检索完成 user=zhangwei 候选=4 过滤后=2 丢弃=2 问题='系统支持上传哪些格式的文档，检索是怎么实现的'
+2026-09-11 09:13:41,584 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (104ms)
+2026-09-11 09:13:42,137 [INFO] jirui: POST /api/v1/auth/login -> 200 (359ms)
+2026-09-11 09:13:42,207 [INFO] app.services.chat: 检索完成 user=lina 候选=2 过滤后=2 丢弃=0 问题='P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-11 09:13:42,209 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (45ms)
+2026-09-11 09:13:42,375 [INFO] app.services.chat: 检索完成 user=lina 候选=2 过滤后=2 丢弃=0 问题='系统支持上传哪些格式的文档，检索是怎么实现的'
+2026-09-11 09:13:42,377 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (127ms)
+2026-09-11 09:13:42,489 [INFO] app.services.chat: 检索完成 user=admin 候选=4 过滤后=4 丢弃=0 问题='系统支持上传哪些格式的文档，检索是怎么实现的 另外 P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-11 09:13:42,491 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (96ms)
+2026-09-11 09:13:42,991 [INFO] jirui: POST /api/v1/auth/login -> 200 (309ms)
+2026-09-11 09:13:43,098 [INFO] app.services.chat: 检索完成 user=zhangwei 候选=4 过滤后=2 丢弃=2 问题='系统支持上传哪些格式的文档，检索是怎么实现的 另外 P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-11 09:13:43,100 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (91ms)
+2026-09-11 09:13:43,491 [INFO] jirui: POST /api/v1/auth/login -> 200 (308ms)
+2026-09-11 09:13:43,607 [INFO] app.services.chat: 检索完成 user=lina 候选=2 过滤后=2 丢弃=0 问题='系统支持上传哪些格式的文档，检索是怎么实现的 另外 P5 级职级的薪酬带宽是多少，绩效奖金怎么算'
+2026-09-11 09:13:43,609 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (87ms)
+2026-09-11 09:13:43,698 [INFO] jirui: GET /api/v1/kb/4/diagnose/2 -> 200 (16ms)
+2026-09-11 09:13:43,723 [INFO] jirui: GET /api/v1/kb/4/acls -> 200 (8ms)
+2026-09-11 09:13:52,328 [INFO] jirui: POST /api/v1/auth/login -> 200 (415ms)
+2026-09-11 09:13:52,439 [INFO] jirui: GET /api/v1/models -> 200 (29ms)
+2026-09-11 09:13:52,516 [INFO] jirui: GET /api/v1/kb -> 200 (11ms)
+2026-09-11 09:13:52,643 [INFO] app.services.chat: 检索完成 user=admin 候选=8 过滤后=8 丢弃=0 问题='年假申请流程是什么'
+2026-09-11 09:13:52,645 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (41ms)
+2026-09-11 09:13:52,757 [INFO] app.services.chat: 检索完成 user=admin 候选=8 过滤后=8 丢弃=0 问题='年假怎么申请'
+2026-09-11 09:13:52,768 [ERROR] jirui: 请求处理异常 POST /api/v1/chat/completions
+Traceback (most recent call last):
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 157, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/anyio/streams/memory.py", line 133, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/jirui/backend/app/main.py", line 89, in access_log
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 163, in call_next
+    raise app_exc
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/backend/app/api/v1/chat.py", line 348, in completions
+    prep = await _prepare(db, user, payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/backend/app/api/v1/chat.py", line 315, in _prepare
+    provider = await llm_service.get_provider(db, session.model_provider_id or payload.model_provider_id)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/backend/app/services/llm.py", line 258, in get_provider
+    raise LLMError("系统中没有可用的大模型，请先在「模型管理」中添加并启用一个模型")
+app.services.llm.LLMError: 系统中没有可用的大模型，请先在「模型管理」中添加并启用一个模型
+ERROR:    Exception in ASGI application
+  + Exception Group Traceback (most recent call last):
+  |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_utils.py", line 76, in collapse_excgroups
+  |     yield
+  |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 186, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "/opt/jirui/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 847, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    |     result = await app(  # type: ignore[func-returns-value]
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    |     return await self.app(scope, receive, send)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    |     raise exc
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 185, in __call__
+    |     with collapse_excgroups():
+    |   File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_utils.py", line 82, in collapse_excgroups
+    |     raise exc
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 187, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/jirui/backend/app/main.py", line 89, in access_log
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 163, in call_next
+    |     raise app_exc
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 149, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    |     await route.handle(scope, receive, send)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    |     await self.app(scope, receive, send)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    |     raw_response = await run_endpoint_function(
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    |     return await dependant.call(**values)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/jirui/backend/app/api/v1/chat.py", line 348, in completions
+    |     prep = await _prepare(db, user, payload)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/jirui/backend/app/api/v1/chat.py", line 315, in _prepare
+    |     provider = await llm_service.get_provider(db, session.model_provider_id or payload.model_provider_id)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/jirui/backend/app/services/llm.py", line 258, in get_provider
+    |     raise LLMError("系统中没有可用的大模型，请先在「模型管理」中添加并启用一个模型")
+    | app.services.llm.LLMError: 系统中没有可用的大模型，请先在「模型管理」中添加并启用一个模型
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 185, in __call__
+    with collapse_excgroups():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_utils.py", line 82, in collapse_excgroups
+    raise exc
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 187, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/backend/app/main.py", line 89, in access_log
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 163, in call_next
+    raise app_exc
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/backend/app/api/v1/chat.py", line 348, in completions
+    prep = await _prepare(db, user, payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/backend/app/api/v1/chat.py", line 315, in _prepare
+    provider = await llm_service.get_provider(db, session.model_provider_id or payload.model_provider_id)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/backend/app/services/llm.py", line 258, in get_provider
+    raise LLMError("系统中没有可用的大模型，请先在「模型管理」中添加并启用一个模型")
+app.services.llm.LLMError: 系统中没有可用的大模型，请先在「模型管理」中添加并启用一个模型
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-09-11 09:15:21,200 [INFO] jirui: 后端退出
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1998]
+INFO:     Started server process [2225]
+INFO:     Waiting for application startup.
+2026-09-11 09:15:23,866 [INFO] jirui: ====================================================================
+2026-09-11 09:15:23,866 [INFO] jirui: 极睿知识库 后端启动，版本 0.1.0
+2026-09-11 09:15:23,866 [INFO] jirui: ====================================================================
+2026-09-11 09:15:23,866 [INFO] app.db.seed: 本地嵌入模型就绪：/opt/jirui/models/bge-small-zh-v1.5
+2026-09-11 09:15:23,866 [INFO] app.db.seed: 检索索引库：/opt/jirui/data/index/chunks.db
+2026-09-11 09:15:23,878 [INFO] app.db.session: 数据库表结构已同步（SQLite）
+2026-09-11 09:15:23,912 [WARNING] app.db.seed: 未配置 DEFAULT_LLM_API_KEY，跳过默认模型初始化。请登录后到「模型管理」手动添加模型。
+2026-09-11 09:15:23,923 [INFO] app.services.index_store: 检索索引库就绪 path=/opt/jirui/data/index/chunks.db 分词=jieba
+2026-09-11 09:15:23,923 [INFO] app.services.ingest: 文档入库工作者已启动
+2026-09-11 09:15:23,924 [INFO] jirui: 就绪，监听 /api/v1
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2026-09-11 09:15:38,652 [INFO] jirui: POST /api/v1/auth/login -> 200 (352ms)
+2026-09-11 09:15:38,962 [INFO] app.services.embedding: 本地嵌入模型已加载 path=model_quantized.onnx inputs=['input_ids', 'attention_mask', 'token_type_ids'] output=sentence_embedding dim=512
+2026-09-11 09:15:39,909 [INFO] app.services.chat: 检索完成 user=admin 候选=8 过滤后=8 丢弃=0 问题='年假怎么申请'
+2026-09-11 09:15:39,918 [INFO] jirui: POST /api/v1/chat/completions -> 409 (1208ms)
+2026-09-11 09:15:40,052 [INFO] app.services.chat: 检索完成 user=admin 候选=8 过滤后=8 丢弃=0 问题='年假怎么申请'
+2026-09-11 09:15:40,054 [INFO] jirui: POST /api/v1/chat/retrieval-preview -> 200 (43ms)
+2026-09-11 09:15:40,534 [INFO] jirui: POST /api/v1/auth/login -> 200 (317ms)
+2026-09-11 09:15:40,920 [INFO] jirui: POST /api/v1/auth/login -> 200 (347ms)
+2026-09-11 09:19:07,594 [INFO] jirui: POST /api/v1/auth/login -> 200 (400ms)
+2026-09-11 09:19:07,687 [INFO] jirui: GET /api/v1/models -> 200 (13ms)
+2026-09-11 09:19:07,817 [INFO] jirui: POST /api/v1/models -> 201 (85ms)
+2026-09-11 09:19:09,644 [INFO] httpx: HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 09:19:09,648 [INFO] jirui: POST /api/v1/models/1/test -> 200 (1748ms)
+2026-09-11 09:19:17,365 [INFO] jirui: POST /api/v1/auth/login -> 200 (431ms)
+2026-09-11 09:19:17,477 [INFO] app.services.chat: 检索完成 user=admin 候选=8 过滤后=8 丢弃=0 问题='员工年假怎么申请？有什么要求？'
+2026-09-11 09:19:23,200 [INFO] httpx: HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 09:19:23,218 [INFO] jirui: POST /api/v1/chat/completions -> 200 (5795ms)
+2026-09-11 09:19:23,324 [INFO] app.services.chat: 检索完成 user=admin 候选=8 过滤后=8 丢弃=0 问题='公司年会在哪天举办？'
+2026-09-11 09:19:24,473 [INFO] httpx: HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 09:19:24,493 [INFO] jirui: POST /api/v1/chat/completions -> 200 (1226ms)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-09-11 09:55:36,398 [INFO] jirui: 后端退出
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2225]
+INFO:     Started server process [4100]
+INFO:     Waiting for application startup.
+2026-09-11 09:55:39,151 [INFO] jirui: ====================================================================
+2026-09-11 09:55:39,151 [INFO] jirui: 极睿知识库 后端启动，版本 0.1.0
+2026-09-11 09:55:39,151 [INFO] jirui: ====================================================================
+2026-09-11 09:55:39,151 [INFO] app.db.seed: 本地嵌入模型就绪：/opt/jirui/models/bge-small-zh-v1.5
+2026-09-11 09:55:39,151 [INFO] app.db.seed: 检索索引库：/opt/jirui/data/index/chunks.db
+2026-09-11 09:55:39,164 [INFO] app.db.session: 数据库表结构已同步（SQLite）
+2026-09-11 09:55:39,209 [INFO] app.services.index_store: 检索索引库就绪 path=/opt/jirui/data/index/chunks.db 分词=jieba
+2026-09-11 09:55:39,209 [INFO] app.services.ingest: 文档入库工作者已启动
+2026-09-11 09:55:39,209 [INFO] jirui: 就绪，监听 /api/v1
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2026-09-11 09:55:45,039 [INFO] jirui: GET /api/v1/system/health -> 200 (1ms)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-09-11 09:56:55,784 [INFO] jirui: 后端退出
+INFO:     Application shutdown complete.
+INFO:     Finished server process [4100]
+Traceback (most recent call last):
+  File "/opt/jirui/venv/bin/uvicorn", line 6, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/click/core.py", line 1631, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/click/core.py", line 1552, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/click/core.py", line 1415, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/click/core.py", line 910, in invoke
+    return callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/main.py", line 412, in main
+    run(
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/main.py", line 579, in run
+    server.run()
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/server.py", line 70, in serve
+    await self._serve(sockets)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/server.py", line 77, in _serve
+    config.load()
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/config.py", line 435, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/jirui/backend/app/main.py", line 15, in <module>
+    from app.api.v1.router import api_router
+  File "/opt/jirui/backend/app/api/v1/router.py", line 6, in <module>
+    from app.api.v1 import auth, chat, folders, knowledge, logs, models, permissions, system
+  File "/opt/jirui/backend/app/api/v1/chat.py", line 43, in <module>
+    from app.services import audit, chat as chat_service, llm as llm_service, storage
+  File "/opt/jirui/backend/app/services/chat.py", line 16, in <module>
+    from app.services.permission import PermissionScope, PermissionService
+  File "/opt/jirui/backend/app/services/permission.py", line 37, in <module>
+    from app.models.knowledge import ChunkAcl, KbDocument, KbFolder, KbPermission, KnowledgeBase
+ImportError: cannot import name 'KbFolder' from 'app.models.knowledge' (/opt/jirui/backend/app/models/knowledge.py)
+Traceback (most recent call last):
+  File "/opt/jirui/venv/bin/uvicorn", line 6, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/click/core.py", line 1631, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/click/core.py", line 1552, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/click/core.py", line 1415, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/click/core.py", line 910, in invoke
+    return callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/main.py", line 412, in main
+    run(
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/main.py", line 579, in run
+    server.run()
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/server.py", line 70, in serve
+    await self._serve(sockets)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/server.py", line 77, in _serve
+    config.load()
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/config.py", line 435, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/jirui/backend/app/main.py", line 15, in <module>
+    from app.api.v1.router import api_router
+  File "/opt/jirui/backend/app/api/v1/router.py", line 6, in <module>
+    from app.api.v1 import auth, chat, folders, knowledge, logs, models, permissions, system
+  File "/opt/jirui/backend/app/api/v1/chat.py", line 43, in <module>
+    from app.services import audit, chat as chat_service, llm as llm_service, storage
+  File "/opt/jirui/backend/app/services/chat.py", line 16, in <module>
+    from app.services.permission import PermissionScope, PermissionService
+  File "/opt/jirui/backend/app/services/permission.py", line 37, in <module>
+    from app.models.knowledge import ChunkAcl, KbDocument, KbFolder, KbPermission, KnowledgeBase
+ImportError: cannot import name 'KbFolder' from 'app.models.knowledge' (/opt/jirui/backend/app/models/knowledge.py)
+Traceback (most recent call last):
+  File "/opt/jirui/venv/bin/uvicorn", line 6, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/click/core.py", line 1631, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/click/core.py", line 1552, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/click/core.py", line 1415, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/click/core.py", line 910, in invoke
+    return callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/main.py", line 412, in main
+    run(
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/main.py", line 579, in run
+    server.run()
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/server.py", line 70, in serve
+    await self._serve(sockets)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/server.py", line 77, in _serve
+    config.load()
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/config.py", line 435, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/jirui/backend/app/main.py", line 15, in <module>
+    from app.api.v1.router import api_router
+  File "/opt/jirui/backend/app/api/v1/router.py", line 6, in <module>
+    from app.api.v1 import auth, chat, folders, knowledge, logs, models, permissions, system
+  File "/opt/jirui/backend/app/api/v1/chat.py", line 43, in <module>
+    from app.services import audit, chat as chat_service, llm as llm_service, storage
+  File "/opt/jirui/backend/app/services/chat.py", line 16, in <module>
+    from app.services.permission import PermissionScope, PermissionService
+  File "/opt/jirui/backend/app/services/permission.py", line 37, in <module>
+    from app.models.knowledge import ChunkAcl, KbDocument, KbFolder, KbPermission, KnowledgeBase
+ImportError: cannot import name 'KbFolder' from 'app.models.knowledge' (/opt/jirui/backend/app/models/knowledge.py)
+Traceback (most recent call last):
+  File "/opt/jirui/venv/bin/uvicorn", line 6, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/click/core.py", line 1631, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/click/core.py", line 1552, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/click/core.py", line 1415, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/click/core.py", line 910, in invoke
+    return callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/main.py", line 412, in main
+    run(
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/main.py", line 579, in run
+    server.run()
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/server.py", line 70, in serve
+    await self._serve(sockets)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/server.py", line 77, in _serve
+    config.load()
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/config.py", line 435, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/jirui/backend/app/main.py", line 15, in <module>
+    from app.api.v1.router import api_router
+  File "/opt/jirui/backend/app/api/v1/router.py", line 6, in <module>
+    from app.api.v1 import auth, chat, folders, knowledge, logs, models, permissions, system
+  File "/opt/jirui/backend/app/api/v1/chat.py", line 43, in <module>
+    from app.services import audit, chat as chat_service, llm as llm_service, storage
+  File "/opt/jirui/backend/app/services/chat.py", line 16, in <module>
+    from app.services.permission import PermissionScope, PermissionService
+  File "/opt/jirui/backend/app/services/permission.py", line 37, in <module>
+    from app.models.knowledge import ChunkAcl, KbDocument, KbFolder, KbPermission, KnowledgeBase
+ImportError: cannot import name 'KbFolder' from 'app.models.knowledge' (/opt/jirui/backend/app/models/knowledge.py)
+Traceback (most recent call last):
+  File "/opt/jirui/venv/bin/uvicorn", line 6, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/click/core.py", line 1631, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/click/core.py", line 1552, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/click/core.py", line 1415, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/click/core.py", line 910, in invoke
+    return callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/main.py", line 412, in main
+    run(
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/main.py", line 579, in run
+    server.run()
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/server.py", line 70, in serve
+    await self._serve(sockets)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/server.py", line 77, in _serve
+    config.load()
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/config.py", line 435, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/jirui/backend/app/main.py", line 15, in <module>
+    from app.api.v1.router import api_router
+  File "/opt/jirui/backend/app/api/v1/router.py", line 6, in <module>
+    from app.api.v1 import auth, chat, folders, knowledge, logs, models, permissions, system
+  File "/opt/jirui/backend/app/api/v1/chat.py", line 43, in <module>
+    from app.services import audit, chat as chat_service, llm as llm_service, storage
+  File "/opt/jirui/backend/app/services/chat.py", line 16, in <module>
+    from app.services.permission import PermissionScope, PermissionService
+  File "/opt/jirui/backend/app/services/permission.py", line 37, in <module>
+    from app.models.knowledge import ChunkAcl, KbDocument, KbFolder, KbPermission, KnowledgeBase
+ImportError: cannot import name 'KbFolder' from 'app.models.knowledge' (/opt/jirui/backend/app/models/knowledge.py)
+INFO:     Started server process [4738]
+INFO:     Waiting for application startup.
+2026-09-11 09:57:31,089 [INFO] jirui: ====================================================================
+2026-09-11 09:57:31,089 [INFO] jirui: 极睿知识库 后端启动，版本 0.1.0
+2026-09-11 09:57:31,089 [INFO] jirui: ====================================================================
+2026-09-11 09:57:31,090 [INFO] app.db.seed: 本地嵌入模型就绪：/opt/jirui/models/bge-small-zh-v1.5
+2026-09-11 09:57:31,090 [INFO] app.db.seed: 检索索引库：/opt/jirui/data/index/chunks.db
+2026-09-11 09:57:31,102 [INFO] app.db.session: 数据库表结构已同步（SQLite）
+2026-09-11 09:57:31,151 [INFO] app.services.index_store: 检索索引库就绪 path=/opt/jirui/data/index/chunks.db 分词=jieba
+2026-09-11 09:57:31,151 [INFO] app.services.ingest: 文档入库工作者已启动
+2026-09-11 09:57:31,151 [INFO] jirui: 就绪，监听 /api/v1
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2026-09-11 09:57:37,241 [INFO] jirui: GET /api/v1/system/health -> 200 (1ms)
+2026-09-11 09:58:02,890 [INFO] jirui: POST /api/v1/auth/login -> 200 (379ms)
+2026-09-11 09:58:02,952 [INFO] jirui: GET /api/v1/kb -> 200 (18ms)
+2026-09-11 09:58:03,346 [INFO] jirui: POST /api/v1/auth/login -> 200 (370ms)
+2026-09-11 09:58:03,734 [INFO] jirui: POST /api/v1/auth/login -> 200 (295ms)
+2026-09-11 09:58:03,774 [INFO] jirui: POST /api/v1/kb/1/folders -> 201 (19ms)
+2026-09-11 09:58:03,865 [INFO] jirui: POST /api/v1/kb/1/folders -> 201 (15ms)
+2026-09-11 09:58:03,914 [INFO] jirui: POST /api/v1/kb/1/folders -> 201 (16ms)
+2026-09-11 09:58:03,996 [INFO] jirui: POST /api/v1/kb/1/folders -> 201 (15ms)
+2026-09-11 09:58:04,079 [INFO] jirui: GET /api/v1/kb/1/folders -> 200 (13ms)
+2026-09-11 09:58:04,180 [INFO] jirui: GET /api/v1/kb/1/folders -> 403 (12ms)
+2026-09-11 09:58:04,263 [INFO] jirui: GET /api/v1/kb/1/permissions/candidates -> 200 (11ms)
+2026-09-11 09:58:04,324 [INFO] jirui: POST /api/v1/kb/1/folders/2/acls -> 200 (18ms)
+2026-09-11 09:58:04,399 [INFO] jirui: GET /api/v1/kb/1/folders -> 403 (9ms)
+2026-09-11 09:58:04,489 [INFO] jirui: GET /api/v1/kb/1/folders/2/acls -> 200 (10ms)
+2026-09-11 09:58:04,580 [INFO] jirui: DELETE /api/v1/kb/1/folders/2/acls/3 -> 200 (17ms)
+2026-09-11 09:58:04,676 [INFO] jirui: GET /api/v1/kb/1/folders -> 403 (11ms)
+2026-09-11 09:58:04,718 [INFO] jirui: GET /api/v1/kb/1/folders -> 403 (10ms)
+2026-09-11 09:58:04,806 [INFO] jirui: DELETE /api/v1/kb/1/folders/2 -> 409 (13ms)
+2026-09-11 09:58:04,907 [INFO] jirui: GET /api/v1/kb/1/documents -> 200 (14ms)
+2026-09-11 09:58:05,013 [INFO] jirui: DELETE /api/v1/kb/1/folders/4 -> 200 (19ms)
+2026-09-11 09:58:05,123 [INFO] jirui: DELETE /api/v1/kb/1/folders/3 -> 200 (16ms)
+2026-09-11 09:58:05,204 [INFO] jirui: DELETE /api/v1/kb/1/folders/2 -> 200 (16ms)
+2026-09-11 09:58:05,248 [INFO] jirui: DELETE /api/v1/kb/1/folders/1 -> 200 (15ms)
+2026-09-11 09:58:05,315 [INFO] jirui: GET /api/v1/kb/1/folders -> 200 (10ms)
+2026-09-11 09:58:15,755 [INFO] jirui: POST /api/v1/auth/login -> 200 (397ms)
+2026-09-11 09:58:15,945 [INFO] jirui: GET /api/v1/kb -> 200 (14ms)
+2026-09-11 09:58:16,419 [INFO] jirui: POST /api/v1/auth/login -> 200 (366ms)
+2026-09-11 09:58:16,479 [INFO] jirui: GET /api/v1/kb -> 200 (19ms)
+2026-09-11 09:58:16,570 [INFO] jirui: GET /api/v1/kb/1/my-visibility -> 403 (9ms)
+2026-09-11 09:58:16,978 [INFO] jirui: POST /api/v1/auth/login -> 200 (379ms)
+2026-09-11 09:58:17,077 [INFO] jirui: GET /api/v1/kb -> 200 (21ms)
+2026-09-11 09:58:17,180 [INFO] jirui: GET /api/v1/kb/1/my-visibility -> 403 (8ms)
+2026-09-11 09:58:34,494 [INFO] jirui: POST /api/v1/auth/login -> 200 (313ms)
+2026-09-11 09:58:34,596 [INFO] jirui: GET /api/v1/kb -> 200 (15ms)
+2026-09-11 09:58:35,050 [INFO] jirui: POST /api/v1/auth/login -> 200 (356ms)
+2026-09-11 09:58:35,419 [INFO] jirui: POST /api/v1/auth/login -> 200 (320ms)
+2026-09-11 09:58:35,512 [INFO] jirui: GET /api/v1/kb/3/my-visibility -> 403 (7ms)
+2026-09-11 09:58:35,600 [INFO] jirui: GET /api/v1/kb/3/my-visibility -> 403 (7ms)
+2026-09-11 09:58:35,631 [INFO] jirui: GET /api/v1/kb/1/my-visibility -> 403 (7ms)
+2026-09-11 09:58:35,706 [INFO] jirui: GET /api/v1/kb/1/my-visibility -> 403 (7ms)
+2026-09-11 09:58:35,822 [INFO] jirui: GET /api/v1/kb/2/my-visibility -> 403 (90ms)
+2026-09-11 09:58:35,901 [INFO] jirui: GET /api/v1/kb/2/my-visibility -> 403 (7ms)
+2026-09-11 09:58:35,965 [INFO] jirui: GET /api/v1/kb/4/my-visibility -> 200 (20ms)
+2026-09-11 09:58:36,024 [INFO] jirui: GET /api/v1/kb/4/my-visibility -> 200 (16ms)
+2026-09-11 09:58:36,118 [INFO] jirui: POST /api/v1/kb/4/folders -> 201 (15ms)
+2026-09-11 09:58:36,216 [INFO] jirui: POST /api/v1/kb/4/folders -> 201 (14ms)
+2026-09-11 09:58:36,270 [INFO] jirui: POST /api/v1/kb/4/folders -> 201 (15ms)
+2026-09-11 09:58:36,344 [INFO] jirui: POST /api/v1/kb/4/folders -> 201 (15ms)
+2026-09-11 09:58:36,423 [INFO] jirui: GET /api/v1/kb/4/folders -> 200 (11ms)
+2026-09-11 09:58:36,529 [INFO] jirui: GET /api/v1/kb/4/folders -> 200 (17ms)
+2026-09-11 09:58:36,626 [INFO] jirui: GET /api/v1/kb/4/permissions/candidates -> 200 (10ms)
+2026-09-11 09:58:36,668 [INFO] jirui: POST /api/v1/kb/4/folders/2/acls -> 200 (14ms)
+2026-09-11 09:58:36,752 [INFO] jirui: GET /api/v1/kb/4/folders -> 200 (18ms)
+2026-09-11 09:58:36,862 [INFO] jirui: GET /api/v1/kb/4/folders/2/acls -> 200 (9ms)
+2026-09-11 09:58:36,963 [INFO] jirui: DELETE /api/v1/kb/4/folders/2/acls/3 -> 200 (13ms)
+2026-09-11 09:58:37,065 [INFO] jirui: GET /api/v1/kb/4/folders -> 200 (18ms)
+2026-09-11 09:58:37,188 [INFO] jirui: GET /api/v1/kb/4/folders -> 200 (17ms)
+2026-09-11 09:58:37,270 [INFO] jirui: DELETE /api/v1/kb/4/folders/2 -> 409 (10ms)
+2026-09-11 09:58:37,389 [INFO] jirui: GET /api/v1/kb/4/documents -> 200 (15ms)
+2026-09-11 09:58:37,485 [INFO] jirui: POST /api/v1/kb/4/documents/move -> 200 (35ms)
+2026-09-11 09:58:37,582 [INFO] jirui: GET /api/v1/kb/4/documents -> 200 (16ms)
+2026-09-11 09:58:37,670 [INFO] jirui: POST /api/v1/kb/4/documents/move -> 200 (19ms)
+2026-09-11 09:58:37,769 [INFO] jirui: DELETE /api/v1/kb/4/folders/4 -> 200 (23ms)
+2026-09-11 09:58:37,885 [INFO] jirui: DELETE /api/v1/kb/4/folders/3 -> 200 (21ms)
+2026-09-11 09:58:37,985 [INFO] jirui: DELETE /api/v1/kb/4/folders/2 -> 200 (20ms)
+2026-09-11 09:58:38,070 [INFO] jirui: DELETE /api/v1/kb/4/folders/1 -> 200 (24ms)
+2026-09-11 09:58:38,189 [INFO] jirui: GET /api/v1/kb/4/folders -> 200 (13ms)
+2026-09-11 09:59:32,245 [INFO] jirui: GET /api/v1/system/health -> 200 (0ms)
+2026-09-11 10:09:03,528 [INFO] jirui: GET /api/v1/system/health -> 200 (1ms)
+2026-09-11 10:09:03,538 [INFO] jirui: POST /api/v1/auth/login -> 200 (412ms)
+2026-09-11 10:09:03,660 [INFO] jirui: GET /api/v1/system/health -> 200 (2ms)
+2026-09-11 10:09:25,243 [INFO] jirui: GET /api/v1/system/health -> 200 (1ms)
+2026-09-11 10:09:25,816 [INFO] jirui: POST /api/v1/auth/login -> 200 (384ms)
+2026-09-11 10:10:58,148 [INFO] jirui: POST /api/v1/auth/login -> 200 (323ms)
+2026-09-11 10:16:56,136 [INFO] jirui: POST /api/v1/auth/login -> 200 (327ms)
+2026-09-11 10:19:14,659 [INFO] jirui: POST /api/v1/auth/login -> 200 (297ms)
+2026-09-11 10:33:56,843 [INFO] jirui: POST /api/v1/auth/login -> 200 (342ms)
+2026-09-11 10:35:02,999 [INFO] jirui: GET /api/v1/system/health -> 200 (1ms)
+2026-09-11 10:35:03,886 [INFO] jirui: POST /api/v1/auth/login -> 200 (369ms)
+2026-09-11 10:38:09,134 [INFO] jirui: POST /api/v1/auth/login -> 200 (362ms)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-09-11 10:39:27,600 [INFO] jirui: 后端退出
+INFO:     Application shutdown complete.
+INFO:     Finished server process [4738]
+INFO:     Started server process [8893]
+INFO:     Waiting for application startup.
+2026-09-11 10:39:30,492 [INFO] jirui: ====================================================================
+2026-09-11 10:39:30,492 [INFO] jirui: 极睿知识库 后端启动，版本 0.1.0
+2026-09-11 10:39:30,492 [INFO] jirui: ====================================================================
+2026-09-11 10:39:30,492 [INFO] app.db.seed: 本地嵌入模型就绪：/opt/jirui/models/bge-small-zh-v1.5
+2026-09-11 10:39:30,493 [INFO] app.db.seed: 检索索引库：/opt/jirui/data/index/chunks.db
+2026-09-11 10:39:30,512 [INFO] app.db.session: 数据库表结构已同步（SQLite）
+2026-09-11 10:39:30,570 [INFO] app.services.index_store: 检索索引库就绪 path=/opt/jirui/data/index/chunks.db 分词=jieba
+2026-09-11 10:39:30,570 [INFO] app.services.ingest: 文档入库工作者已启动
+2026-09-11 10:39:30,570 [INFO] jirui: 就绪，监听 /api/v1
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2026-09-11 10:39:31,046 [INFO] jirui: GET /api/v1/system/health -> 200 (0ms)
+2026-09-11 10:39:48,415 [INFO] jirui: OPTIONS /api/v1/auth/login -> 200 (0ms)
+2026-09-11 10:39:49,433 [INFO] jirui: POST /api/v1/auth/login -> 200 (405ms)
+2026-09-11 10:42:13,059 [INFO] jirui: HEAD / -> 405 (0ms)
+2026-09-11 11:56:53,511 [INFO] jirui: GET /api/v1/system/health -> 200 (0ms)
+2026-09-11 11:56:53,527 [INFO] jirui: GET /api/v1/system/health -> 200 (0ms)
+2026-09-11 13:10:28,192 [INFO] jirui: GET /api/v1/system/health -> 200 (1ms)
+2026-09-11 13:10:31,311 [INFO] jirui: POST /api/v1/auth/login -> 200 (414ms)
+2026-09-11 13:10:31,437 [INFO] jirui: GET /api/v1/models/available -> 200 (34ms)
+2026-09-11 13:10:31,445 [INFO] jirui: GET /api/v1/kb -> 200 (44ms)
+2026-09-11 13:10:31,457 [INFO] jirui: GET /api/v1/chat/sessions -> 200 (45ms)
+2026-09-11 13:10:31,502 [INFO] jirui: GET /api/v1/chat/sessions/2 -> 200 (16ms)
+2026-09-11 13:10:51,965 [INFO] jirui: GET /api/v1/chat/sessions/1 -> 200 (15ms)
+2026-09-11 13:10:54,155 [INFO] jirui: DELETE /api/v1/chat/sessions/1 -> 200 (50ms)
+2026-09-11 13:10:55,654 [INFO] jirui: GET /api/v1/chat/sessions/2 -> 200 (18ms)
+2026-09-11 13:11:02,526 [INFO] jirui: GET /api/v1/models/available -> 200 (29ms)
+2026-09-11 13:11:02,530 [INFO] jirui: GET /api/v1/chat/sessions -> 200 (28ms)
+2026-09-11 13:11:02,537 [INFO] jirui: GET /api/v1/kb -> 200 (33ms)
+2026-09-11 13:11:02,623 [INFO] jirui: GET /api/v1/chat/sessions/2 -> 200 (20ms)
+2026-09-11 13:11:03,871 [INFO] jirui: GET /api/v1/chat/sessions -> 200 (33ms)
+2026-09-11 13:11:03,874 [INFO] jirui: GET /api/v1/models/available -> 200 (38ms)
+2026-09-11 13:11:03,876 [INFO] jirui: GET /api/v1/kb -> 200 (43ms)
+2026-09-11 13:11:03,963 [INFO] jirui: GET /api/v1/chat/sessions/2 -> 200 (14ms)
+2026-09-11 13:11:06,329 [INFO] jirui: POST /api/v1/auth/logout -> 200 (25ms)
+2026-09-11 13:11:06,422 [INFO] jirui: GET /api/v1/system/health -> 200 (1ms)
+2026-09-11 13:11:09,190 [INFO] jirui: POST /api/v1/auth/login -> 200 (313ms)
+2026-09-11 13:11:09,287 [INFO] jirui: GET /api/v1/logs/stats -> 200 (28ms)
+2026-09-11 13:11:09,518 [INFO] app.services.embedding: 本地嵌入模型已加载 path=model_quantized.onnx inputs=['input_ids', 'attention_mask', 'token_type_ids'] output=sentence_embedding dim=512
+2026-09-11 13:11:09,519 [INFO] jirui: GET /api/v1/system/info -> 200 (263ms)
+2026-09-11 13:11:11,329 [INFO] jirui: GET /api/v1/tags -> 200 (23ms)
+2026-09-11 13:11:11,332 [INFO] jirui: GET /api/v1/users -> 200 (29ms)
+2026-09-11 13:11:13,358 [INFO] jirui: GET /api/v1/models/available -> 200 (160ms)
+2026-09-11 13:11:13,360 [INFO] jirui: GET /api/v1/chat/sessions -> 200 (165ms)
+2026-09-11 13:11:13,363 [INFO] jirui: GET /api/v1/kb -> 200 (171ms)
+2026-09-11 13:11:13,413 [INFO] jirui: GET /api/v1/chat/sessions/2 -> 200 (15ms)
+2026-09-11 13:11:17,272 [INFO] jirui: GET /api/v1/system/info -> 200 (25ms)
+2026-09-11 13:11:17,278 [INFO] jirui: GET /api/v1/logs/stats -> 200 (28ms)
+2026-09-11 13:11:19,000 [INFO] jirui: GET /api/v1/system/health -> 200 (0ms)
+2026-09-11 13:11:25,467 [INFO] jirui: GET /api/v1/tags -> 200 (30ms)
+2026-09-11 13:11:25,472 [INFO] jirui: GET /api/v1/users -> 200 (31ms)
+2026-09-11 13:11:28,569 [INFO] jirui: POST /api/v1/auth/login -> 200 (325ms)
+2026-09-11 13:11:28,724 [INFO] jirui: GET /api/v1/kb -> 200 (14ms)
+2026-09-11 13:11:28,742 [INFO] jirui: GET /api/v1/models/available -> 200 (16ms)
+2026-09-11 13:11:28,753 [INFO] jirui: GET /api/v1/chat/sessions -> 200 (17ms)
+2026-09-11 13:11:28,844 [INFO] jirui: GET /api/v1/chat/sessions/2 -> 200 (22ms)
+2026-09-11 13:11:35,881 [INFO] jirui: DELETE /api/v1/users/2 -> 200 (71ms)
+2026-09-11 13:11:35,924 [INFO] jirui: GET /api/v1/users -> 200 (22ms)
+2026-09-11 13:11:37,437 [INFO] jirui: DELETE /api/v1/users/3 -> 200 (23ms)
+2026-09-11 13:11:37,468 [INFO] jirui: GET /api/v1/users -> 200 (12ms)
+2026-09-11 13:12:43,544 [INFO] jirui: POST /api/v1/users -> 201 (365ms)
+2026-09-11 13:12:43,602 [INFO] jirui: GET /api/v1/users -> 200 (14ms)
+2026-09-11 13:14:15,064 [INFO] jirui: POST /api/v1/users -> 400 (23ms)
+2026-09-11 13:14:24,967 [INFO] jirui: POST /api/v1/users -> 201 (311ms)
+2026-09-11 13:14:25,065 [INFO] jirui: GET /api/v1/users -> 200 (12ms)
+2026-09-11 13:14:53,005 [INFO] jirui: POST /api/v1/users -> 201 (406ms)
+2026-09-11 13:14:53,037 [INFO] jirui: GET /api/v1/users -> 200 (13ms)
+2026-09-11 13:15:23,799 [INFO] jirui: GET /api/v1/system/health -> 200 (1ms)
+2026-09-11 13:15:38,811 [INFO] jirui: POST /api/v1/auth/login -> 401 (321ms)
+2026-09-11 13:15:43,302 [INFO] jirui: POST /api/v1/auth/login -> 200 (360ms)
+2026-09-11 13:15:43,371 [INFO] jirui: GET /api/v1/auth/sessions -> 200 (23ms)
+2026-09-11 13:15:43,373 [INFO] jirui: GET /api/v1/system/stats/mine -> 200 (22ms)
+2026-09-11 13:15:53,122 [INFO] jirui: GET /api/v1/models/available -> 200 (50ms)
+2026-09-11 13:15:53,124 [INFO] jirui: GET /api/v1/chat/sessions -> 200 (49ms)
+2026-09-11 13:15:53,130 [INFO] jirui: GET /api/v1/kb -> 200 (61ms)
+2026-09-11 13:16:01,692 [INFO] jirui: GET /api/v1/auth/me -> 200 (10ms)
+2026-09-11 13:16:01,784 [INFO] jirui: GET /api/v1/models/available -> 200 (35ms)
+2026-09-11 13:16:01,791 [INFO] jirui: GET /api/v1/chat/sessions -> 200 (40ms)
+2026-09-11 13:16:01,795 [INFO] jirui: GET /api/v1/kb -> 200 (49ms)
+2026-09-11 13:16:04,291 [INFO] jirui: GET /api/v1/logs/stats -> 200 (33ms)
+2026-09-11 13:16:04,292 [INFO] jirui: GET /api/v1/system/info -> 200 (38ms)
+2026-09-11 13:16:06,068 [INFO] jirui: GET /api/v1/tags -> 200 (33ms)
+2026-09-11 13:16:06,070 [INFO] jirui: GET /api/v1/users -> 200 (38ms)
+2026-09-11 13:16:06,864 [INFO] jirui: GET /api/v1/kb -> 200 (24ms)
+2026-09-11 13:16:07,473 [INFO] jirui: GET /api/v1/tags -> 200 (19ms)
+2026-09-11 13:16:07,479 [INFO] jirui: GET /api/v1/users -> 200 (27ms)
+2026-09-11 13:16:11,309 [INFO] jirui: GET /api/v1/models/kinds -> 200 (20ms)
+2026-09-11 13:16:11,337 [INFO] jirui: GET /api/v1/models -> 200 (53ms)
+2026-09-11 13:17:21,267 [INFO] jirui: POST /api/v1/models -> 201 (31ms)
+2026-09-11 13:17:21,315 [INFO] jirui: GET /api/v1/models/kinds -> 200 (25ms)
+2026-09-11 13:17:21,319 [INFO] jirui: GET /api/v1/models -> 200 (33ms)
+2026-09-11 13:17:24,656 [INFO] httpx: HTTP Request: POST https://maas-coding-api.cn-huabei-1.xf-yun.com/v2/chat/completions "HTTP/1.1 403 Forbidden"
+2026-09-11 13:17:24,660 [INFO] jirui: POST /api/v1/models/2/test -> 200 (194ms)
+2026-09-11 13:17:44,335 [INFO] jirui: PATCH /api/v1/models/2 -> 200 (68ms)
+2026-09-11 13:17:44,380 [INFO] jirui: GET /api/v1/models/kinds -> 200 (22ms)
+2026-09-11 13:17:44,384 [INFO] jirui: GET /api/v1/models -> 200 (28ms)
+2026-09-11 13:17:45,707 [INFO] httpx: HTTP Request: POST https://maas-coding-api.cn-huabei-1.xf-yun.com/v2/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 13:17:45,710 [INFO] jirui: POST /api/v1/models/2/test -> 200 (352ms)
+2026-09-11 13:17:59,053 [INFO] jirui: PATCH /api/v1/models/2 -> 200 (20ms)
+2026-09-11 13:17:59,089 [INFO] jirui: GET /api/v1/models/kinds -> 200 (17ms)
+2026-09-11 13:17:59,093 [INFO] jirui: GET /api/v1/models -> 200 (24ms)
+2026-09-11 13:18:00,623 [INFO] jirui: GET /api/v1/logs -> 200 (20ms)
+2026-09-11 13:18:00,629 [INFO] jirui: GET /api/v1/logs/actions -> 200 (24ms)
+2026-09-11 13:18:03,720 [INFO] jirui: GET /api/v1/models/kinds -> 200 (14ms)
+2026-09-11 13:18:03,728 [INFO] jirui: GET /api/v1/models -> 200 (17ms)
+2026-09-11 13:18:04,301 [INFO] jirui: GET /api/v1/system/versions -> 200 (29ms)
+2026-09-11 13:18:05,868 [INFO] jirui: GET /api/v1/logs/actions -> 200 (17ms)
+2026-09-11 13:18:05,876 [INFO] jirui: GET /api/v1/logs -> 200 (21ms)
+2026-09-11 13:18:06,285 [INFO] jirui: GET /api/v1/tags -> 200 (17ms)
+2026-09-11 13:18:06,301 [INFO] jirui: GET /api/v1/users -> 200 (28ms)
+2026-09-11 13:18:06,702 [INFO] jirui: GET /api/v1/system/info -> 200 (22ms)
+2026-09-11 13:18:06,706 [INFO] jirui: GET /api/v1/logs/stats -> 200 (30ms)
+2026-09-11 13:18:07,448 [INFO] jirui: GET /api/v1/tags -> 200 (19ms)
+2026-09-11 13:18:07,454 [INFO] jirui: GET /api/v1/users -> 200 (21ms)
+2026-09-11 13:18:07,957 [INFO] jirui: GET /api/v1/kb -> 200 (13ms)
+2026-09-11 13:18:11,663 [INFO] jirui: GET /api/v1/models/available -> 200 (29ms)
+2026-09-11 13:18:11,664 [INFO] jirui: GET /api/v1/chat/sessions -> 200 (32ms)
+2026-09-11 13:18:11,668 [INFO] jirui: GET /api/v1/kb -> 200 (32ms)
+2026-09-11 13:18:22,333 [INFO] jirui: GET /api/v1/auth/me -> 200 (7ms)
+2026-09-11 13:18:22,372 [INFO] jirui: GET /api/v1/models/available -> 200 (19ms)
+2026-09-11 13:18:22,382 [INFO] jirui: GET /api/v1/chat/sessions -> 200 (27ms)
+2026-09-11 13:18:22,385 [INFO] jirui: GET /api/v1/kb -> 200 (26ms)
+2026-09-11 13:18:27,846 [INFO] jirui: GET /api/v1/system/info -> 200 (28ms)
+2026-09-11 13:18:27,848 [INFO] jirui: GET /api/v1/logs/stats -> 200 (28ms)
+2026-09-11 13:18:29,192 [INFO] jirui: GET /api/v1/tags -> 200 (29ms)
+2026-09-11 13:18:29,194 [INFO] jirui: GET /api/v1/users -> 200 (27ms)
+2026-09-11 13:18:30,068 [INFO] jirui: GET /api/v1/kb -> 200 (12ms)
+2026-09-11 13:18:30,964 [INFO] jirui: GET /api/v1/tags -> 200 (24ms)
+2026-09-11 13:18:30,972 [INFO] jirui: GET /api/v1/users -> 200 (27ms)
+2026-09-11 13:18:31,606 [INFO] jirui: GET /api/v1/models/kinds -> 200 (16ms)
+2026-09-11 13:18:31,613 [INFO] jirui: GET /api/v1/models -> 200 (18ms)
+2026-09-11 13:18:37,974 [INFO] jirui: GET /api/v1/models/available -> 200 (25ms)
+2026-09-11 13:18:37,980 [INFO] jirui: GET /api/v1/chat/sessions -> 200 (29ms)
+2026-09-11 13:18:37,993 [INFO] jirui: GET /api/v1/kb -> 200 (39ms)
+2026-09-11 13:18:56,846 [INFO] app.services.storage: 文件已保存 attachments/20260911/a11e74cb988047a3a8274992e317a173.jpg (411910 bytes)
+2026-09-11 13:18:56,847 [INFO] jirui: POST /api/v1/chat/upload -> 200 (467ms)
+2026-09-11 13:19:07,196 [INFO] app.services.chat: 检索完成 user=noah 候选=6 过滤后=6 丢弃=0 问题='这是谁'
+2026-09-11 13:19:07,205 [INFO] jirui: POST /api/v1/chat/completions -> 200 (1138ms)
+2026-09-11 13:19:08,088 [INFO] httpx: HTTP Request: POST https://maas-coding-api.cn-huabei-1.xf-yun.com/v2/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 13:19:08,254 [INFO] jirui: GET /api/v1/chat/sessions -> 200 (13ms)
+2026-09-11 13:19:19,815 [INFO] app.services.chat: 检索完成 user=noah 候选=10 过滤后=8 丢弃=0 问题='你是谁'
+2026-09-11 13:19:19,828 [INFO] jirui: POST /api/v1/chat/completions -> 200 (39ms)
+2026-09-11 13:19:20,103 [INFO] httpx: HTTP Request: POST https://maas-coding-api.cn-huabei-1.xf-yun.com/v2/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 13:19:20,345 [INFO] jirui: GET /api/v1/chat/sessions -> 200 (9ms)
+2026-09-11 13:19:25,420 [INFO] jirui: GET /api/v1/auth/me -> 200 (11ms)
+2026-09-11 13:19:25,470 [INFO] jirui: GET /api/v1/users -> 200 (21ms)
+2026-09-11 13:19:25,496 [INFO] jirui: GET /api/v1/tags -> 200 (9ms)
+2026-09-11 13:19:34,409 [INFO] jirui: GET /api/v1/models/kinds -> 200 (14ms)
+2026-09-11 13:19:34,412 [INFO] jirui: GET /api/v1/models -> 200 (21ms)
+2026-09-11 13:19:34,892 [INFO] jirui: GET /api/v1/auth/sessions -> 200 (23ms)
+2026-09-11 13:19:34,895 [INFO] jirui: GET /api/v1/system/stats/mine -> 200 (34ms)
+2026-09-11 13:19:39,698 [INFO] jirui: GET /api/v1/chat/sessions -> 200 (37ms)
+2026-09-11 13:19:39,700 [INFO] jirui: GET /api/v1/kb -> 200 (41ms)
+2026-09-11 13:19:39,703 [INFO] jirui: GET /api/v1/models/available -> 200 (38ms)
+2026-09-11 13:19:39,736 [INFO] jirui: GET /api/v1/chat/sessions/3 -> 200 (13ms)
+2026-09-11 13:19:42,265 [INFO] jirui: GET /api/v1/system/info -> 200 (21ms)
+2026-09-11 13:19:42,266 [INFO] jirui: GET /api/v1/logs/stats -> 200 (26ms)
+2026-09-11 13:19:49,479 [INFO] jirui: GET /api/v1/tags -> 200 (22ms)
+2026-09-11 13:19:49,484 [INFO] jirui: GET /api/v1/users -> 200 (24ms)
+2026-09-11 13:19:50,849 [INFO] jirui: PATCH /api/v1/models/2 -> 200 (20ms)
+2026-09-11 13:19:50,921 [INFO] jirui: GET /api/v1/models -> 200 (19ms)
+2026-09-11 13:19:50,926 [INFO] jirui: GET /api/v1/models/kinds -> 200 (17ms)
+2026-09-11 13:19:52,458 [INFO] jirui: GET /api/v1/kb -> 200 (26ms)
+2026-09-11 13:19:54,045 [INFO] jirui: GET /api/v1/models/kinds -> 200 (15ms)
+2026-09-11 13:19:54,053 [INFO] jirui: GET /api/v1/models -> 200 (18ms)
+2026-09-11 13:19:55,524 [INFO] jirui: GET /api/v1/logs/actions -> 200 (20ms)
+2026-09-11 13:19:55,529 [INFO] jirui: GET /api/v1/logs -> 200 (23ms)
+2026-09-11 13:19:56,444 [INFO] jirui: GET /api/v1/logs/actions -> 200 (23ms)
+2026-09-11 13:19:56,453 [INFO] jirui: GET /api/v1/logs -> 200 (26ms)
+2026-09-11 13:19:58,106 [INFO] jirui: GET /api/v1/system/versions -> 200 (14ms)
+2026-09-11 13:19:58,376 [INFO] jirui: GET /api/v1/system/versions -> 200 (11ms)
+2026-09-11 13:19:58,524 [INFO] jirui: GET /api/v1/logs/actions -> 200 (15ms)
+2026-09-11 13:19:58,532 [INFO] jirui: GET /api/v1/logs -> 200 (19ms)
+2026-09-11 13:19:59,276 [INFO] jirui: GET /api/v1/models/kinds -> 200 (13ms)
+2026-09-11 13:19:59,285 [INFO] jirui: GET /api/v1/models -> 200 (18ms)
+2026-09-11 13:19:59,868 [INFO] jirui: GET /api/v1/logs -> 200 (15ms)
+2026-09-11 13:19:59,908 [INFO] jirui: GET /api/v1/logs/actions -> 200 (10ms)
+2026-09-11 13:20:00,221 [INFO] jirui: GET /api/v1/models/kinds -> 200 (18ms)
+2026-09-11 13:20:00,225 [INFO] jirui: GET /api/v1/models -> 200 (16ms)
+2026-09-11 13:20:00,672 [INFO] jirui: GET /api/v1/kb -> 200 (16ms)
+2026-09-11 13:20:02,751 [INFO] jirui: GET /api/v1/logs/actions -> 200 (16ms)
+2026-09-11 13:20:02,759 [INFO] jirui: GET /api/v1/logs -> 200 (20ms)
+2026-09-11 13:20:03,626 [INFO] jirui: GET /api/v1/system/versions -> 200 (10ms)
+2026-09-11 13:20:04,421 [INFO] jirui: GET /api/v1/logs/actions -> 200 (12ms)
+2026-09-11 13:20:04,428 [INFO] jirui: GET /api/v1/logs -> 200 (14ms)
+2026-09-11 13:20:05,497 [INFO] jirui: GET /api/v1/models/available -> 200 (19ms)
+2026-09-11 13:20:05,508 [INFO] jirui: GET /api/v1/chat/sessions -> 200 (28ms)
+2026-09-11 13:20:05,510 [INFO] jirui: GET /api/v1/kb -> 200 (28ms)
+2026-09-11 13:20:05,547 [INFO] jirui: GET /api/v1/chat/sessions/3 -> 200 (13ms)
+2026-09-11 13:20:27,334 [INFO] app.services.chat: 检索完成 user=noah 候选=12 过滤后=8 丢弃=0 问题='你好'
+2026-09-11 13:20:27,346 [INFO] jirui: POST /api/v1/chat/completions -> 200 (46ms)
+2026-09-11 13:20:27,694 [INFO] httpx: HTTP Request: POST https://maas-coding-api.cn-huabei-1.xf-yun.com/v2/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 13:20:28,053 [INFO] jirui: GET /api/v1/chat/sessions -> 200 (27ms)
+2026-09-11 13:20:38,095 [INFO] app.services.chat: 检索完成 user=noah 候选=12 过滤后=8 丢弃=0 问题='你是什么'
+2026-09-11 13:20:38,105 [INFO] jirui: POST /api/v1/chat/completions -> 200 (45ms)
+2026-09-11 13:20:38,419 [INFO] httpx: HTTP Request: POST https://maas-coding-api.cn-huabei-1.xf-yun.com/v2/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 13:20:38,633 [INFO] jirui: GET /api/v1/chat/sessions -> 200 (10ms)
+2026-09-11 13:20:46,609 [INFO] app.services.storage: 文件已保存 attachments/20260911/0df3e2ca1d1842738817368469adc65d.jpg (411910 bytes)
+2026-09-11 13:20:46,610 [INFO] jirui: POST /api/v1/chat/upload -> 200 (224ms)
+2026-09-11 13:20:54,594 [INFO] app.services.chat: 检索完成 user=noah 候选=6 过滤后=6 丢弃=0 问题='这是谁'
+2026-09-11 13:20:54,607 [INFO] jirui: POST /api/v1/chat/completions -> 200 (51ms)
+2026-09-11 13:20:55,500 [INFO] httpx: HTTP Request: POST https://maas-coding-api.cn-huabei-1.xf-yun.com/v2/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 13:20:55,649 [INFO] jirui: GET /api/v1/chat/sessions -> 200 (10ms)
+2026-09-11 13:21:28,608 [INFO] jirui: GET /api/v1/kb/1 -> 200 (21ms)
+2026-09-11 13:21:28,645 [INFO] jirui: GET /api/v1/kb/1/documents -> 200 (15ms)
+2026-09-11 13:21:28,693 [INFO] jirui: GET /api/v1/kb/1/folders -> 200 (16ms)
+2026-09-11 13:21:29,760 [INFO] jirui: GET /api/v1/system/info -> 200 (26ms)
+2026-09-11 13:21:29,765 [INFO] jirui: GET /api/v1/logs/stats -> 200 (26ms)
+2026-09-11 13:21:31,077 [INFO] jirui: GET /api/v1/tags -> 200 (14ms)
+2026-09-11 13:21:31,086 [INFO] jirui: GET /api/v1/users -> 200 (18ms)
+2026-09-11 13:21:31,515 [INFO] jirui: GET /api/v1/kb -> 200 (15ms)
+2026-09-11 13:21:34,548 [INFO] jirui: GET /api/v1/kb/3 -> 200 (8ms)
+2026-09-11 13:21:34,581 [INFO] jirui: GET /api/v1/kb/3/folders -> 200 (14ms)
+2026-09-11 13:21:34,588 [INFO] jirui: GET /api/v1/kb/3/documents -> 200 (17ms)
+2026-09-11 13:21:36,490 [INFO] jirui: GET /api/v1/logs/stats -> 200 (29ms)
+2026-09-11 13:21:36,494 [INFO] jirui: GET /api/v1/system/info -> 200 (35ms)
+2026-09-11 13:21:37,222 [INFO] jirui: GET /api/v1/tags -> 200 (14ms)
+2026-09-11 13:21:37,226 [INFO] jirui: GET /api/v1/users -> 200 (21ms)
+2026-09-11 13:21:38,644 [INFO] jirui: GET /api/v1/kb -> 200 (14ms)
+2026-09-11 13:21:38,949 [INFO] jirui: GET /api/v1/kb -> 200 (11ms)
+2026-09-11 13:21:51,162 [INFO] jirui: GET /api/v1/system/versions -> 200 (32ms)
+2026-09-11 13:21:52,487 [INFO] jirui: GET /api/v1/logs/actions -> 200 (28ms)
+2026-09-11 13:21:52,494 [INFO] jirui: GET /api/v1/logs -> 200 (32ms)
+2026-09-11 13:21:53,259 [INFO] jirui: GET /api/v1/system/versions -> 200 (16ms)
+2026-09-11 13:21:53,684 [INFO] jirui: PATCH /api/v1/kb/2 -> 200 (20ms)
+2026-09-11 13:21:53,724 [INFO] jirui: GET /api/v1/kb -> 200 (13ms)
+2026-09-11 13:21:54,100 [INFO] jirui: GET /api/v1/logs/actions -> 200 (18ms)
+2026-09-11 13:21:54,107 [INFO] jirui: GET /api/v1/logs -> 200 (21ms)
+2026-09-11 13:21:54,900 [INFO] jirui: GET /api/v1/kb/1 -> 200 (9ms)
+2026-09-11 13:21:54,941 [INFO] jirui: GET /api/v1/kb/1/documents -> 200 (21ms)
+2026-09-11 13:21:54,944 [INFO] jirui: GET /api/v1/kb/1/folders -> 200 (22ms)
+2026-09-11 13:21:57,338 [INFO] jirui: GET /api/v1/system/versions -> 200 (16ms)
+2026-09-11 13:21:57,880 [INFO] jirui: GET /api/v1/models/kinds -> 200 (17ms)
+2026-09-11 13:21:57,883 [INFO] jirui: GET /api/v1/models -> 200 (17ms)
+2026-09-11 13:22:11,320 [INFO] jirui: GET /api/v1/kb -> 200 (14ms)
+2026-09-11 13:22:12,156 [INFO] jirui: GET /api/v1/tags -> 200 (22ms)
+2026-09-11 13:22:12,171 [INFO] jirui: GET /api/v1/users -> 200 (34ms)
+2026-09-11 13:22:13,382 [INFO] jirui: GET /api/v1/logs/stats -> 200 (23ms)
+2026-09-11 13:22:13,386 [INFO] jirui: GET /api/v1/system/info -> 200 (23ms)
+2026-09-11 13:22:19,351 [INFO] jirui: GET /api/v1/tags -> 200 (22ms)
+2026-09-11 13:22:19,355 [INFO] jirui: GET /api/v1/users -> 200 (22ms)
+2026-09-11 13:22:20,876 [INFO] jirui: GET /api/v1/models/kinds -> 200 (15ms)
+2026-09-11 13:22:20,883 [INFO] jirui: GET /api/v1/models -> 200 (18ms)
+2026-09-11 13:22:21,391 [INFO] jirui: GET /api/v1/logs/actions -> 200 (19ms)
+2026-09-11 13:22:21,406 [INFO] jirui: GET /api/v1/logs -> 200 (29ms)
+2026-09-11 13:22:23,536 [INFO] jirui: GET /api/v1/system/versions -> 200 (10ms)
+2026-09-11 13:22:29,558 [INFO] jirui: GET /api/v1/logs/actions -> 200 (13ms)
+2026-09-11 13:22:29,569 [INFO] jirui: GET /api/v1/logs -> 200 (20ms)
+2026-09-11 13:22:30,313 [INFO] jirui: GET /api/v1/models/kinds -> 200 (19ms)
+2026-09-11 13:22:30,320 [INFO] jirui: GET /api/v1/models -> 200 (19ms)
+2026-09-11 13:22:32,892 [INFO] jirui: GET /api/v1/models/available -> 200 (45ms)
+2026-09-11 13:22:32,895 [INFO] jirui: GET /api/v1/chat/sessions -> 200 (46ms)
+2026-09-11 13:22:32,898 [INFO] jirui: GET /api/v1/kb -> 200 (46ms)
+2026-09-11 13:22:32,930 [INFO] jirui: GET /api/v1/chat/sessions/3 -> 200 (12ms)
+2026-09-11 13:22:46,316 [INFO] app.services.storage: 文件已保存 kb_1/20260911/e5bd056e7f8c48289840bb06c9d04904.md (8870 bytes)
+2026-09-11 13:22:46,346 [INFO] jirui: POST /api/v1/kb/1/documents/upload -> 200 (48ms)
+2026-09-11 13:22:46,510 [INFO] jirui: GET /api/v1/kb/1/documents -> 200 (95ms)
+2026-09-11 13:22:46,517 [INFO] jirui: GET /api/v1/kb/1 -> 200 (88ms)
+2026-09-11 13:22:48,882 [INFO] app.services.ingest: 文档解析完成 name=极睿智能RPA开发规范.md 片段=18 字数=4951 耗时=2.5s
+2026-09-11 13:22:52,561 [INFO] jirui: GET /api/v1/kb/1/documents/6/chunks -> 200 (15ms)
+2026-09-11 13:23:02,297 [INFO] jirui: GET /api/v1/kb/1/folders -> 200 (14ms)
+2026-09-11 13:23:05,183 [INFO] jirui: GET /api/v1/kb/1/permissions -> 200 (15ms)
+2026-09-11 13:23:05,664 [INFO] jirui: GET /api/v1/kb/1/acls -> 200 (11ms)
+2026-09-11 13:23:06,099 [INFO] jirui: GET /api/v1/users -> 200 (18ms)
+2026-09-11 13:23:06,195 [INFO] jirui: GET /api/v1/kb/1/diagnose/1 -> 200 (22ms)
+2026-09-11 13:23:07,011 [INFO] jirui: GET /api/v1/kb/1/acls -> 200 (9ms)
+2026-09-11 13:23:07,608 [INFO] jirui: GET /api/v1/users -> 200 (13ms)
+2026-09-11 13:23:07,644 [INFO] jirui: GET /api/v1/kb/1/diagnose/1 -> 200 (18ms)
+2026-09-11 13:23:12,753 [INFO] jirui: GET /api/v1/kb/1/acls -> 200 (11ms)
+2026-09-11 13:23:15,704 [INFO] jirui: GET /api/v1/users -> 200 (20ms)
+2026-09-11 13:23:15,709 [INFO] jirui: GET /api/v1/kb/1/documents -> 200 (21ms)
+2026-09-11 13:23:17,231 [INFO] jirui: GET /api/v1/kb/1/permissions -> 200 (10ms)
+2026-09-11 13:23:17,541 [INFO] jirui: GET /api/v1/kb/1/folders -> 200 (15ms)
+2026-09-11 13:23:17,806 [INFO] jirui: GET /api/v1/kb/1/documents -> 200 (23ms)
+2026-09-11 13:23:17,812 [INFO] jirui: GET /api/v1/kb/1/folders -> 200 (26ms)
+2026-09-11 13:23:18,886 [INFO] jirui: GET /api/v1/models/available -> 200 (26ms)
+2026-09-11 13:23:18,892 [INFO] jirui: GET /api/v1/kb -> 200 (34ms)
+2026-09-11 13:23:18,903 [INFO] jirui: GET /api/v1/chat/sessions -> 200 (34ms)
+2026-09-11 13:23:19,018 [INFO] jirui: GET /api/v1/chat/sessions/2 -> 200 (39ms)
+2026-09-11 13:23:22,393 [INFO] jirui: POST /api/v1/auth/logout -> 200 (12ms)
+2026-09-11 13:23:22,499 [INFO] jirui: GET /api/v1/system/health -> 200 (0ms)
+2026-09-11 13:23:25,258 [INFO] jirui: POST /api/v1/auth/login -> 200 (355ms)
+2026-09-11 13:23:25,447 [INFO] jirui: GET /api/v1/kb -> 200 (28ms)
+2026-09-11 13:23:25,451 [INFO] jirui: GET /api/v1/models/available -> 200 (26ms)
+2026-09-11 13:23:25,452 [INFO] jirui: GET /api/v1/chat/sessions -> 200 (26ms)
+2026-09-11 13:23:25,526 [INFO] jirui: GET /api/v1/chat/sessions/2 -> 200 (10ms)
+2026-09-11 13:23:27,576 [INFO] jirui: GET /api/v1/chat/sessions/2 -> 200 (14ms)
+2026-09-11 13:23:33,996 [INFO] app.services.chat: 检索完成 user=admin 候选=8 过滤后=8 丢弃=0 问题='日志文件应该怎么命名？'
+2026-09-11 13:23:34,008 [INFO] jirui: POST /api/v1/chat/completions -> 200 (88ms)
+2026-09-11 13:23:34,881 [INFO] httpx: HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 13:23:39,974 [INFO] jirui: GET /api/v1/chat/sessions -> 200 (13ms)
+2026-09-11 13:23:57,404 [INFO] jirui: POST /api/v1/chat/messages/16/feedback -> 200 (41ms)
+2026-09-11 13:24:19,447 [INFO] app.services.chat: 检索完成 user=admin 候选=8 过滤后=8 丢弃=0 问题='机房有什么规范'
+2026-09-11 13:24:19,457 [INFO] jirui: POST /api/v1/chat/completions -> 200 (38ms)
+2026-09-11 13:24:19,735 [INFO] httpx: HTTP Request: POST https://maas-coding-api.cn-huabei-1.xf-yun.com/v2/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 13:24:25,782 [INFO] jirui: GET /api/v1/chat/sessions -> 200 (28ms)
+2026-09-11 13:24:54,190 [INFO] jirui: GET /api/v1/logs/stats -> 200 (41ms)
+2026-09-11 13:24:54,192 [INFO] jirui: GET /api/v1/system/info -> 200 (47ms)
+2026-09-11 13:24:57,223 [INFO] jirui: GET /api/v1/kb -> 200 (21ms)
+2026-09-11 13:26:30,804 [INFO] jirui: GET /api/v1/kb/1 -> 200 (11ms)
+2026-09-11 13:26:30,890 [INFO] jirui: GET /api/v1/kb/1/documents -> 200 (24ms)
+2026-09-11 13:26:30,892 [INFO] jirui: GET /api/v1/kb/1/folders -> 200 (30ms)
+2026-09-11 13:26:35,332 [INFO] jirui: GET /api/v1/kb -> 200 (21ms)
+2026-09-11 13:26:52,542 [INFO] jirui: GET /api/v1/system/info -> 200 (27ms)
+2026-09-11 13:26:52,550 [INFO] jirui: GET /api/v1/logs/stats -> 200 (30ms)
+2026-09-11 13:29:27,150 [INFO] jirui: GET /api/v1/tags -> 200 (30ms)
+2026-09-11 13:29:27,162 [INFO] jirui: GET /api/v1/users -> 200 (34ms)
+2026-09-11 13:29:28,501 [INFO] jirui: GET /api/v1/kb -> 200 (14ms)
+2026-09-11 13:30:00,415 [INFO] jirui: GET /api/v1/kb/3 -> 200 (16ms)
+2026-09-11 13:30:00,508 [INFO] jirui: GET /api/v1/kb/3/folders -> 200 (26ms)
+2026-09-11 13:30:00,511 [INFO] jirui: GET /api/v1/kb/3/documents -> 200 (27ms)
+2026-09-11 13:30:03,375 [INFO] jirui: GET /api/v1/kb -> 200 (16ms)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-09-11 13:46:46,445 [INFO] jirui: 后端退出
+INFO:     Application shutdown complete.
+INFO:     Finished server process [8893]
+INFO:     Started server process [29314]
+INFO:     Waiting for application startup.
+2026-09-11 13:46:56,233 [INFO] jirui: ====================================================================
+2026-09-11 13:46:56,234 [INFO] jirui: 极睿知识库 后端启动，版本 0.1.0
+2026-09-11 13:46:56,234 [INFO] jirui: ====================================================================
+2026-09-11 13:46:56,234 [INFO] app.db.seed: 本地嵌入模型就绪：/opt/jirui/models/bge-small-zh-v1.5
+2026-09-11 13:46:56,234 [INFO] app.db.seed: 检索索引库：/opt/jirui/data/index/chunks.db
+2026-09-11 13:46:56,257 [INFO] app.db.session: 数据库表结构已同步（SQLite）
+2026-09-11 13:46:56,349 [INFO] app.services.index_store: 检索索引库就绪 path=/opt/jirui/data/index/chunks.db 分词=jieba
+2026-09-11 13:46:56,350 [INFO] app.services.ingest: 文档入库工作者已启动
+2026-09-11 13:46:56,350 [INFO] jirui: 就绪，监听 /api/v1
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2026-09-11 14:00:40,970 [INFO] jirui: GET /api/v1/kb/2 -> 401 (8ms)
+2026-09-11 14:00:41,042 [ERROR] jirui: 请求处理异常 POST /api/v1/auth/refresh
+Traceback (most recent call last):
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 157, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/anyio/streams/memory.py", line 133, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/jirui/backend/app/main.py", line 89, in access_log
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 163, in call_next
+    raise app_exc
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/backend/app/api/v1/auth.py", line 153, in refresh
+    if row.expires_at <= utcnow():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: can't compare offset-naive and offset-aware datetimes
+ERROR:    Exception in ASGI application
+  + Exception Group Traceback (most recent call last):
+  |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_utils.py", line 76, in collapse_excgroups
+  |     yield
+  |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 186, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "/opt/jirui/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 847, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    |     result = await app(  # type: ignore[func-returns-value]
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    |     return await self.app(scope, receive, send)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    |     raise exc
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 185, in __call__
+    |     with collapse_excgroups():
+    |   File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_utils.py", line 82, in collapse_excgroups
+    |     raise exc
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 187, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/jirui/backend/app/main.py", line 89, in access_log
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 163, in call_next
+    |     raise app_exc
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 149, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    |     await self.simple_response(scope, receive, send, request_headers=headers)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    |     await self.app(scope, receive, send)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    |     await route.handle(scope, receive, send)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    |     await self.app(scope, receive, send)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    |     raw_response = await run_endpoint_function(
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/jirui/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    |     return await dependant.call(**values)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/opt/jirui/backend/app/api/v1/auth.py", line 153, in refresh
+    |     if row.expires_at <= utcnow():
+    |        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | TypeError: can't compare offset-naive and offset-aware datetimes
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 185, in __call__
+    with collapse_excgroups():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_utils.py", line 82, in collapse_excgroups
+    raise exc
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 187, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/backend/app/main.py", line 89, in access_log
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 163, in call_next
+    raise app_exc
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/opt/jirui/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/venv/lib/python3.12/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jirui/backend/app/api/v1/auth.py", line 153, in refresh
+    if row.expires_at <= utcnow():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: can't compare offset-naive and offset-aware datetimes
+2026-09-11 14:00:41,139 [INFO] jirui: GET /api/v1/kb -> 401 (1ms)
+2026-09-11 14:00:47,814 [INFO] jirui: POST /api/v1/auth/login -> 200 (441ms)
+2026-09-11 14:00:47,900 [INFO] jirui: GET /api/v1/models/available -> 200 (24ms)
+2026-09-11 14:00:47,914 [INFO] jirui: GET /api/v1/kb -> 200 (33ms)
+2026-09-11 14:00:47,926 [INFO] jirui: GET /api/v1/chat/sessions -> 200 (18ms)
+2026-09-11 14:00:48,007 [INFO] jirui: GET /api/v1/chat/sessions/4 -> 200 (17ms)
+2026-09-11 14:00:53,342 [INFO] jirui: GET /api/v1/auth/sessions -> 200 (27ms)
+2026-09-11 14:00:53,344 [INFO] jirui: GET /api/v1/system/stats/mine -> 200 (28ms)
+2026-09-11 14:01:11,682 [INFO] jirui: GET /api/v1/models/available -> 200 (36ms)
+2026-09-11 14:01:11,691 [INFO] jirui: GET /api/v1/kb -> 200 (41ms)
+2026-09-11 14:01:11,693 [INFO] jirui: GET /api/v1/chat/sessions -> 200 (54ms)
+2026-09-11 14:01:11,770 [INFO] jirui: GET /api/v1/chat/sessions/4 -> 200 (14ms)
+2026-09-11 14:07:35,990 [INFO] jirui: POST /api/v1/chat/messages/16/feedback -> 200 (15ms)
+2026-09-11 14:07:37,331 [INFO] jirui: POST /api/v1/chat/messages/16/feedback -> 200 (14ms)
+2026-09-11 14:07:39,291 [INFO] jirui: GET /api/v1/logs/stats -> 200 (48ms)
+2026-09-11 14:07:39,581 [INFO] app.services.embedding: 本地嵌入模型已加载 path=model_quantized.onnx inputs=['input_ids', 'attention_mask', 'token_type_ids'] output=sentence_embedding dim=512
+2026-09-11 14:07:39,587 [INFO] jirui: GET /api/v1/system/info -> 200 (352ms)
+2026-09-11 14:07:42,263 [INFO] jirui: GET /api/v1/users -> 200 (26ms)
+2026-09-11 14:07:42,269 [INFO] jirui: GET /api/v1/tags -> 200 (27ms)
+2026-09-11 14:07:47,340 [INFO] jirui: GET /api/v1/kb -> 200 (18ms)
+2026-09-11 14:07:55,089 [INFO] jirui: GET /api/v1/kb/3 -> 200 (48ms)
+2026-09-11 14:07:55,425 [INFO] jirui: GET /api/v1/kb/3/folders -> 200 (304ms)
+2026-09-11 14:07:55,427 [INFO] jirui: GET /api/v1/kb/3/documents -> 200 (304ms)
+2026-09-11 14:08:04,517 [INFO] jirui: GET /api/v1/kb/3/documents/3/chunks -> 200 (199ms)
+2026-09-11 14:08:10,238 [INFO] jirui: GET /api/v1/models/kinds -> 200 (250ms)
+2026-09-11 14:08:10,239 [INFO] jirui: GET /api/v1/models -> 200 (244ms)
+2026-09-11 14:09:02,315 [INFO] jirui: PATCH /api/v1/models/1 -> 200 (37ms)
+2026-09-11 14:09:02,401 [INFO] jirui: GET /api/v1/models/kinds -> 200 (12ms)
+2026-09-11 14:09:02,411 [INFO] jirui: GET /api/v1/models -> 200 (18ms)
+2026-09-11 14:09:37,726 [INFO] jirui: PATCH /api/v1/models/1 -> 200 (16ms)
+2026-09-11 14:09:37,768 [INFO] jirui: GET /api/v1/models/kinds -> 200 (12ms)
+2026-09-11 14:09:37,776 [INFO] jirui: GET /api/v1/models -> 200 (16ms)
+2026-09-11 14:09:39,615 [INFO] jirui: GET /api/v1/logs -> 200 (18ms)
+2026-09-11 14:09:39,622 [INFO] jirui: GET /api/v1/logs/actions -> 200 (17ms)
+2026-09-11 14:09:54,010 [INFO] jirui: GET /api/v1/logs -> 200 (18ms)
+2026-09-11 14:09:55,950 [INFO] jirui: GET /api/v1/logs -> 200 (11ms)
+2026-09-11 14:09:57,218 [INFO] jirui: GET /api/v1/logs -> 200 (14ms)
+2026-09-11 14:09:58,412 [INFO] jirui: GET /api/v1/logs -> 200 (16ms)
+2026-09-11 14:09:59,230 [INFO] jirui: GET /api/v1/logs -> 200 (16ms)
+2026-09-11 14:10:00,783 [INFO] jirui: GET /api/v1/logs -> 200 (31ms)
+2026-09-11 14:10:01,815 [INFO] jirui: GET /api/v1/logs -> 200 (11ms)
+2026-09-11 14:10:02,603 [INFO] jirui: GET /api/v1/logs -> 200 (11ms)
+2026-09-11 14:10:04,567 [INFO] jirui: GET /api/v1/logs -> 200 (10ms)
