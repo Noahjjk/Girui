@@ -7,9 +7,9 @@
    存放位置：models/bge-m3/
 
 用法：
-    python download_models.py                # 默认下载/准备 bge-small-zh-v1.5
-    python download_models.py --model all    # 下载全部支持的模型
-    python download_models.py --model bge-m3 # 下载 bge-m3 模型
+    python scripts/download_models.py                # 默认下载/准备 bge-small-zh-v1.5
+    python scripts/download_models.py --model all    # 下载全部支持的模型
+    python scripts/download_models.py --model bge-m3 # 下载 bge-m3 模型
 """
 from __future__ import annotations
 
@@ -22,7 +22,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-ROOT_DIR = Path(__file__).resolve().parent
+ROOT_DIR = Path(__file__).resolve().parent.parent
 MODELS_DIR = ROOT_DIR / "models"
 RAG_DB_MODELS = Path("E:/rag_database/backend/models")
 

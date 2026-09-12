@@ -33,23 +33,11 @@ logs/
 data/
 !data/.gitkeep
 
-# Model files (Large files - should use Git LFS or external storage)
-models/*.onnx
-models/*.pt
-models/*.pth
-models/*.bin
-models/*.safetensors
-models/*.gguf
-models/*.onnx_data
+# Model files and directories (Large models downloaded via scripts/download_models.py)
+models/
+!models/.gitkeep
 
-# Model cache
-models/**/.cache/
-models/**/CACHEDIR.TAG
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Temp files
+# Backups & temp files
+*.bak
 *.tmp
 *.temp

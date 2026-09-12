@@ -3,7 +3,7 @@ import os
 import sys
 from pathlib import Path
 
-# python download_models.py --model all
+# 下载全部模型命令参考：python scripts/download_models.py --model all
 
 # 配置工程路径
 PROJECT_ROOT = Path(__file__).resolve().parent
@@ -19,7 +19,7 @@ os.environ["ALLOWED_ORIGINS"] = "null,http://localhost:8000,http://127.0.0.1:800
 import uvicorn
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
-from app.main import app
+from backend.app.main import app
 
 # 替换 app 原有的 root 路由
 app.router.routes = [r for r in app.router.routes if getattr(r, 'path', None) != "/"]
