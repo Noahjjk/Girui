@@ -138,3 +138,233 @@ html[data-theme] #root, html:not([data-theme]) #root {
 .text-ink-soft { color: var(--text-soft) !important; }
 .text-ink-muted { color: var(--text-muted) !important; }
 .text-ink-faint { color: var(--text-faint) !important; }
+
+/* 彻底强化主题切换菜单项 Hover 效果（超高特异性覆盖 Tailwind 和主题默认变量） */
+.panel button.theme-opt-stone:hover,
+html[data-theme] .panel button.theme-opt-stone:hover,
+html:not([data-theme]) .panel button.theme-opt-stone:hover {
+  background-color: rgba(249, 115, 22, 0.22) !important;
+  border-color: #f97316 !important;
+}
+.panel button.theme-opt-stone:hover span,
+.panel button.theme-opt-stone:hover svg,
+html[data-theme] .panel button.theme-opt-stone:hover span,
+html[data-theme] .panel button.theme-opt-stone:hover svg {
+  color: #f97316 !important;
+}
+
+.panel button.theme-opt-dark:hover,
+html[data-theme] .panel button.theme-opt-dark:hover,
+html:not([data-theme]) .panel button.theme-opt-dark:hover {
+  background-color: rgba(77, 107, 254, 0.24) !important;
+  border-color: #4d6bfe !important;
+}
+.panel button.theme-opt-dark:hover span,
+.panel button.theme-opt-dark:hover svg,
+html[data-theme] .panel button.theme-opt-dark:hover span,
+html[data-theme] .panel button.theme-opt-dark:hover svg {
+  color: #4d6bfe !important;
+}
+
+.panel button.theme-opt-white:hover,
+html[data-theme] .panel button.theme-opt-white:hover,
+html:not([data-theme]) .panel button.theme-opt-white:hover {
+  background-color: #ffffff !important;
+  border-color: #9ca3af !important;
+}
+.panel button.theme-opt-white:hover span,
+.panel button.theme-opt-white:hover svg,
+html[data-theme] .panel button.theme-opt-white:hover span,
+html[data-theme] .panel button.theme-opt-white:hover svg {
+  color: #000000 !important;
+}
+
+/* 菜单项容器自身带有微边框过渡 */
+.panel button.theme-opt-stone,
+.panel button.theme-opt-dark,
+.panel button.theme-opt-white {
+  border: 1px solid transparent !important;
+  transition: all 0.15s ease-in-out !important;
+}
+
+/* ==========================================================================
+   白色主题 (White Theme) 下 Markdown code & pre 行内代码及代码块配色修复
+   ========================================================================== */
+html[data-theme="white"] .md code,
+html[data-theme="white"] code {
+  background-color: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+html[data-theme="white"] .md pre,
+html[data-theme="white"] pre {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+html[data-theme="white"] .md pre code,
+html[data-theme="white"] pre code {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: inherit !important;
+}
+
+/* 确保引用块 blockquote 在白色主题下清晰 */
+html[data-theme="white"] .md blockquote {
+  border-left-color: #cbd5e1 !important;
+  background-color: #f8fafc !important;
+  color: #334155 !important;
+}
+
+/* 确保表格 table 单元格在白色主题下拥有清晰边框和底色 */
+html[data-theme="white"] .md table,
+html[data-theme="white"] .md th,
+html[data-theme="white"] .md td {
+  border-color: #e2e8f0 !important;
+}
+html[data-theme="white"] .md th {
+  background-color: #f1f5f9 !important;
+  color: #000000 !important;
+}
+
+/* ==========================================================================
+   多主题强调字体 (strong / b / mark / code / 引用角标) 与主题底色深度融合优化
+   ========================================================================== */
+
+/* 1. 通用基础强调文字增强 */
+strong, b {
+  font-weight: 700 !important;
+}
+
+/* 2. Stone 主题 (暖石) 深度优化 */
+html[data-theme="stone"], html:not([data-theme]) {
+  ::selection {
+    background: rgba(249, 115, 22, 0.35) !important;
+  }
+}
+html[data-theme="stone"] strong,
+html[data-theme="stone"] b,
+html:not([data-theme]) strong,
+html:not([data-theme]) b {
+  color: #fffaf0 !important; /* 纯净明亮暖白 */
+}
+html[data-theme="stone"] mark,
+html:not([data-theme]) mark {
+  background-color: rgba(249, 115, 22, 0.22) !important;
+  color: #ffedd5 !important;
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+html[data-theme="stone"] .md code,
+html:not([data-theme]) .md code {
+  background-color: #2e2825 !important;
+  border-color: #44403c !important;
+  color: #fdba74 !important; /* 暖杏橙代码文字，在深石背景上极度协调清晰 */
+}
+html[data-theme="stone"] a,
+html:not([data-theme]) a {
+  color: #fb923c !important;
+}
+
+/* 3. Dark 主题 (深邃夜间) 深度优化 */
+html[data-theme="dark"] {
+  ::selection {
+    background: rgba(77, 107, 254, 0.35) !important;
+  }
+}
+html[data-theme="dark"] strong,
+html[data-theme="dark"] b {
+  color: #ffffff !important; /* 高亮纯白 */
+}
+html[data-theme="dark"] mark {
+  background-color: rgba(77, 107, 254, 0.25) !important;
+  color: #e0e7ff !important;
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+html[data-theme="dark"] .md code {
+  background-color: #161a23 !important;
+  border-color: #283042 !important;
+  color: #93c5fd !important; /* 柔和清澈蓝高亮文字 */
+}
+
+/* 4. White 主题 (极度纯净高对比白底) 深度优化 */
+html[data-theme="white"] {
+  ::selection {
+    background: rgba(37, 99, 235, 0.22) !important;
+  }
+}
+html[data-theme="white"] strong,
+html[data-theme="white"] b {
+  color: #000000 !important; /* 纯黑无噪点强调 */
+  font-weight: 750 !important;
+}
+html[data-theme="white"] mark {
+  background-color: #fef08a !important; /* 经典明亮荧光黄高光，黑字 */
+  color: #000000 !important;
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+html[data-theme="white"] .md code,
+html[data-theme="white"] code {
+  background-color: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: #090d16 !important; /* 极深炭黑，高对比度 */
+  font-weight: 600 !important;
+}
+html[data-theme="white"] a {
+  color: #1d4ed8 !important; /* 高对比深蓝 */
+}
+
+/* ==========================================================================
+   白色主题 (White Theme) 下 Markdown 各级标题 (h1-h6) 与有序/无序列表序号纯黑强化
+   ========================================================================== */
+html[data-theme="white"] .md h1,
+html[data-theme="white"] .md h2,
+html[data-theme="white"] .md h3,
+html[data-theme="white"] .md h4,
+html[data-theme="white"] .md h5,
+html[data-theme="white"] .md h6,
+html[data-theme="white"] h1,
+html[data-theme="white"] h2,
+html[data-theme="white"] h3,
+html[data-theme="white"] h4,
+html[data-theme="white"] h5,
+html[data-theme="white"] h6 {
+  color: #000000 !important;
+  font-weight: 750 !important;
+}
+
+/* 列表数字序号 (1. 2. 3. 4.) 在白色主题下保持纯黑 */
+html[data-theme="white"] .md li::marker,
+html[data-theme="white"] li::marker {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+/* 确保正文段落与列表文字均纯黑 */
+html[data-theme="white"] .md p,
+html[data-theme="white"] .md li {
+  color: #000000 !important;
+}
+
+/* Stone 与 Dark 主题下的各级标题颜色同步优化（确保各主题均清晰鲜艳） */
+html[data-theme="stone"] .md h1,
+html[data-theme="stone"] .md h2,
+html[data-theme="stone"] .md h3,
+html[data-theme="stone"] .md h4,
+html:not([data-theme]) .md h1,
+html:not([data-theme]) .md h2,
+html:not([data-theme]) .md h3,
+html:not([data-theme]) .md h4 {
+  color: #fafaf9 !important;
+}
+
+html[data-theme="dark"] .md h1,
+html[data-theme="dark"] .md h2,
+html[data-theme="dark"] .md h3,
+html[data-theme="dark"] .md h4 {
+  color: #ffffff !important;
+}

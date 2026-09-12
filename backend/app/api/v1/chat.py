@@ -483,10 +483,8 @@ async def _stream_answer(
         "has_context": bool(citations),
     })
 
-    if not citations:
-        notice = "知识库中未检索到与该问题相关的内容，以下回答仅供参考。\n\n"
-        buffer.append(notice)
-        yield _sse("delta", {"text": notice})
+    # 注意：不再硬编码在前端输出 notice 提示，避免与大模型内部生成的说明重复出现两遍。
+    # 大模型已在系统提示词引导下自然作答，无需前置拼接重复 notice。
 
     try:
         async for chunk in client.stream(messages, temperature=temperature):
